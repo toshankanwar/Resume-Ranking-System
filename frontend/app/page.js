@@ -88,13 +88,13 @@ export default function HomePage() {
     {
       name: 'Toshan kanwar',
       role: 'HR Director, TechCorp',
-      content: 'This AI system has revolutionized our hiring process. We\'ve reduced screening time by 80% while improving candidate quality.',
+      content: 'This AI system has revolutionized our hiring process. We have reduced screening time by 80% while improving candidate quality.',
       avatar: '👩‍💼'
     },
     {
       name: 'Mike Chen',
       role: 'Talent Acquisition, StartupXYZ',
-      content: 'The BERT semantic analysis is incredible. It understands context better than any human screener I\'ve worked with.',
+      content: 'The BERT semantic analysis is incredible. It understands context better than any human screener I have worked with.',
       avatar: '👨‍💻'
     },
     {

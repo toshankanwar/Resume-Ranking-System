@@ -1,0 +1,128 @@
+Position: Full Stack Developer
+Company: TechInnovate Solutions
+Location: Remote/Hybrid/On-site
+Experience Level: 3-5 years
+Employment Type: Full-time
+
+Job Overview
+We are seeking a talented Full Stack Developer to join our dynamic engineering team. The ideal candidate will be responsible for developing and maintaining both client-side and server-side applications, ensuring seamless user experiences across our digital platforms. You will work on cutting-edge projects from conception to deployment, collaborating with cross-functional teams to deliver high-quality software solutions.
+
+Key Responsibilities
+Frontend Development:
+Design and develop responsive user interfaces using HTML5, CSS3, and modern JavaScript
+
+Build dynamic web applications using React, Angular, or Vue.js frameworks
+
+Implement UI/UX designs with pixel-perfect accuracy and optimal user experience
+
+Ensure cross-browser compatibility and mobile responsiveness
+
+Optimize frontend performance for fast loading times and smooth interactions
+
+Backend Development:
+Develop robust server-side applications using Node.js, Python, Java, or PHP
+
+Design and implement RESTful APIs and GraphQL endpoints
+
+Create and maintain database schemas using SQL and NoSQL databases
+
+Implement authentication, authorization, and security best practices
+
+Build scalable microservices architecture
+
+Database Management:
+Design efficient database structures using MySQL, PostgreSQL, or MongoDB
+
+Optimize database queries for performance and scalability
+
+Implement data migration, backup, and recovery procedures
+
+Manage database indexing and caching strategies
+
+DevOps & Deployment:
+Deploy applications to cloud platforms (AWS, Azure, Google Cloud)
+
+Implement CI/CD pipelines for automated testing and deployment
+
+Configure and manage web servers, load balancers, and containerization (Docker)
+
+Monitor application performance and troubleshoot production issues
+
+Required Qualifications
+Education & Experience:
+Bachelor's degree in Computer Science, Software Engineering, or related field
+
+3-5 years of professional full stack development experience
+
+Proven track record of delivering end-to-end web applications
+
+Technical Skills:
+Frontend: Proficiency in HTML5, CSS3, JavaScript (ES6+), and at least one modern framework (React, Angular, Vue.js)
+
+Backend: Strong experience with server-side languages (Node.js, Python, Java, PHP, or C#)
+
+Databases: Hands-on experience with both SQL and NoSQL databases
+
+Version Control: Expert knowledge of Git and collaborative development workflows
+
+API Development: Experience building and consuming RESTful APIs
+
+Cloud Services: Familiarity with AWS, Azure, or Google Cloud Platform
+
+Testing: Knowledge of unit testing, integration testing, and testing frameworks
+
+Soft Skills:
+Excellent problem-solving and analytical thinking abilities
+
+Strong communication skills for cross-team collaboration
+
+Ability to manage multiple projects and meet deadlines
+
+Eagerness to learn new technologies and stay current with industry trends
+
+Detail-oriented with commitment to code quality and best practices
+
+Preferred Qualifications
+Experience with TypeScript and modern JavaScript features
+
+Knowledge of microservices architecture and distributed systems
+
+Familiarity with containerization (Docker, Kubernetes)
+
+Understanding of Agile/Scrum methodologies
+
+Experience with performance optimization techniques
+
+Knowledge of cybersecurity principles and secure coding practices
+
+Previous experience in fintech, e-commerce, or similar domains
+
+What We Offer
+Competitive salary range: $85,000 - $130,000 (based on experience)
+
+Comprehensive health, dental, and vision insurance
+
+Flexible working arrangements (remote/hybrid options)
+
+Professional development budget for courses and conferences
+
+Stock options and performance-based bonuses
+
+25 days PTO plus company holidays
+
+Modern development tools and equipment
+
+Collaborative, inclusive work environment
+
+Technologies We Use
+Frontend: React, TypeScript, Tailwind CSS, Next.js
+
+Backend: Node.js, Express.js, Python/Django
+
+Databases: PostgreSQL, MongoDB, Redis
+
+Cloud: AWS (EC2, S3, Lambda, RDS)
+
+DevOps: Docker, Jenkins, GitHub Actions
+
+Tools: VS Code, Postman, Jira, Slack

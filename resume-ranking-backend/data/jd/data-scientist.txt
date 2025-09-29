@@ -1,0 +1,55 @@
+Data Scientist - Job Description
+Company: DataTech Solutions
+Location: Remote/Hybrid
+Experience: 3+ years
+
+Position Overview
+We are seeking a skilled Data Scientist to analyze complex datasets, build predictive models, and deliver actionable insights that drive business decisions. You will work with cross-functional teams to solve challenging problems using advanced analytics and machine learning.
+
+Key Responsibilities
+Collect, clean, and analyze large structured and unstructured datasets
+
+Develop machine learning models and predictive algorithms
+
+Perform exploratory data analysis to identify trends and patterns
+
+Create data visualizations and reports for stakeholders
+
+Collaborate with engineering teams to deploy models in production
+
+Design A/B testing frameworks and statistical experiments
+
+Communicate complex findings to non-technical audiences
+
+Required Skills
+Programming: Python, R, SQL
+
+Machine Learning: Scikit-learn, TensorFlow, PyTorch
+
+Statistics: Hypothesis testing, regression analysis, statistical modeling
+
+Visualization: Tableau, Power BI, matplotlib, seaborn
+
+Big Data: Spark, Hadoop (preferred)
+
+Cloud: AWS, Azure, or Google Cloud experience
+
+Qualifications
+Master's/PhD in Data Science, Statistics, Mathematics, or related field
+
+3+ years of hands-on data science experience
+
+Strong problem-solving and analytical thinking skills
+
+Experience with data mining, feature engineering, and model validation
+
+Excellent communication skills for presenting insights
+
+What We Offer
+Competitive salary ($95K-$140K)
+
+Health benefits and flexible work arrangements
+
+Professional development opportunities
+
+Access to cutting-edge tools and technologies

@@ -865,3 +865,57 @@ Exception: No algorithms available for processing
 2025-09-29 13:30:25,788 - __main__ - INFO - Successfully processed 5 resumes in 2.42s
 2025-09-29 13:30:25,794 - api.middleware - INFO - [req_1759132823_9689] 200 - 2.428s
 2025-09-29 13:30:25,794 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 13:30:25] "POST /api/process-resumes HTTP/1.1" 200 -
+2025-09-29 16:15:05,977 - api.error_handlers - INFO - Error handlers registered successfully
+2025-09-29 16:15:06,080 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.102:5000
+2025-09-29 16:15:06,080 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-29 16:15:06,090 - werkzeug - INFO -  * Restarting with stat
+2025-09-29 16:15:12,415 - api.error_handlers - INFO - Error handlers registered successfully
+2025-09-29 16:15:12,432 - werkzeug - WARNING -  * Debugger is active!
+2025-09-29 16:15:12,440 - werkzeug - INFO -  * Debugger PIN: 133-665-231
+2025-09-29 16:36:47,242 - api.middleware - INFO - [req_1759144007_641] OPTIONS /api/process-resumes - Start
+2025-09-29 16:36:47,267 - api.middleware - INFO - [req_1759144007_641] 200 - 0.041s
+2025-09-29 16:36:47,284 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 16:36:47] "OPTIONS /api/process-resumes HTTP/1.1" 200 -
+2025-09-29 16:36:47,325 - api.middleware - INFO - [req_1759144007_641] POST /api/process-resumes - Start
+2025-09-29 16:36:47,418 - __main__ - INFO - Processing request: 5 files, 4 algorithms
+2025-09-29 16:36:47,418 - utils.file_processor - INFO - Processing file 1: Gautam_Resume.pdf (pdf)
+2025-09-29 16:36:48,137 - utils.file_processor - INFO - Successfully processed file: Gautam_Resume.pdf (3024 chars)
+2025-09-29 16:36:48,140 - utils.file_processor - INFO - Processing file 2: resume_ThakurJaideepSingh (3).pdf (pdf)
+2025-09-29 16:36:48,653 - utils.file_processor - INFO - Successfully processed file: resume_ThakurJaideepSingh (3).pdf (3046 chars)
+2025-09-29 16:36:48,656 - utils.file_processor - INFO - Processing file 3: Shaurya's Resume.pdf (pdf)
+2025-09-29 16:36:49,106 - utils.file_processor - INFO - Successfully processed file: Shaurya's Resume.pdf (2245 chars)
+2025-09-29 16:36:49,108 - utils.file_processor - INFO - Processing file 4: Toshan_Kanwar_Resume.pdf (pdf)
+2025-09-29 16:36:49,598 - utils.file_processor - INFO - Successfully processed file: Toshan_Kanwar_Resume.pdf (3354 chars)
+2025-09-29 16:36:49,598 - utils.file_processor - INFO - Processing file 5: Vandit_tyagi_resume_latest1.pdf (pdf)
+2025-09-29 16:36:50,132 - utils.file_processor - INFO - Successfully processed file: Vandit_tyagi_resume_latest1.pdf (3222 chars)
+2025-09-29 16:36:50,140 - core.algorithm_manager - INFO - Initializing algorithm: bert
+2025-09-29 16:36:50,163 - algorithms.deep_learning.bert_analyzer - INFO - Loading BERT model: bert-base-uncased
+2025-09-29 16:36:56,669 - algorithms.deep_learning.bert_analyzer - INFO - BERT model loaded successfully
+2025-09-29 16:36:56,669 - core.algorithm_manager - INFO - Algorithm bert initialized successfully
+2025-09-29 16:36:56,669 - core.algorithm_manager - INFO - Initializing algorithm: sbert
+2025-09-29 16:36:56,685 - algorithms.deep_learning.bert_analyzer - INFO - Loading BERT model: sentence-transformers/all-MiniLM-L6-v2
+2025-09-29 16:36:58,339 - algorithms.deep_learning.bert_analyzer - INFO - BERT model loaded successfully
+2025-09-29 16:36:58,339 - core.algorithm_manager - INFO - Algorithm sbert initialized successfully
+2025-09-29 16:36:58,339 - core.algorithm_manager - INFO - Initializing algorithm: xgboost
+2025-09-29 16:36:58,342 - algorithms.traditional_ml.xgboost_classifier - INFO - Initializing new XGBoost model
+2025-09-29 16:36:58,492 - algorithms.traditional_ml.xgboost_classifier - INFO - XGBoost model initialized with dummy data
+2025-09-29 16:36:58,492 - algorithms.traditional_ml.xgboost_classifier - INFO - XGBoost model ready
+2025-09-29 16:36:58,492 - core.algorithm_manager - INFO - Algorithm xgboost initialized successfully
+2025-09-29 16:36:58,492 - core.algorithm_manager - INFO - Initializing algorithm: ner
+2025-09-29 16:36:58,508 - algorithms.similarity.ner_analyzer - INFO - Loading spaCy model
+2025-09-29 16:36:59,491 - algorithms.similarity.ner_analyzer - INFO - Loaded spaCy model: en_core_web_sm
+2025-09-29 16:36:59,491 - core.algorithm_manager - INFO - Algorithm ner initialized successfully
+2025-09-29 16:36:59,498 - core.algorithm_manager - INFO - Processing 5 resumes with 4 algorithms
+2025-09-29 16:36:59,615 - algorithms.base_algorithm - INFO - xgboost processed 5 resumes in 0.09s
+2025-09-29 16:36:59,615 - core.algorithm_manager - INFO - Completed processing with xgboost
+2025-09-29 16:37:00,137 - algorithms.base_algorithm - INFO - ner processed 5 resumes in 0.61s
+2025-09-29 16:37:00,137 - core.algorithm_manager - INFO - Completed processing with ner
+2025-09-29 16:37:03,370 - algorithms.base_algorithm - INFO - bert processed 5 resumes in 3.85s
+2025-09-29 16:37:03,386 - core.algorithm_manager - INFO - Completed processing with sbert
+2025-09-29 16:37:07,470 - algorithms.base_algorithm - INFO - bert processed 5 resumes in 7.97s
+2025-09-29 16:37:07,470 - core.algorithm_manager - INFO - Completed processing with bert
+2025-09-29 16:37:07,481 - __main__ - INFO - Successfully processed 5 resumes in 20.16s
+2025-09-29 16:37:07,483 - api.middleware - INFO - [req_1759144007_641] 200 - 20.158s
+2025-09-29 16:37:07,485 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 16:37:07] "POST /api/process-resumes HTTP/1.1" 200 -
