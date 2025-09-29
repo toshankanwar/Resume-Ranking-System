@@ -286,7 +286,7 @@ export default function HomePage() {
               <div key={index} className="card animate-slide-up" style={{ animationDelay: `${index * 0.2}s` }}>
                 <Quote className="w-8 h-8 text-primary-500 mb-4" />
                 <p className="text-gray-600 dark:text-gray-300 mb-6 text-lg italic">
-                  "{testimonial.content}"
+                  {testimonial.content}
                 </p>
                 <div className="flex items-center">
                   <div className="text-3xl mr-4">{testimonial.avatar}</div>
