@@ -86,7 +86,7 @@ export default function HomePage() {
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
+      name: 'Toshan kanwar',
       role: 'HR Director, TechCorp',
       content: 'This AI system has revolutionized our hiring process. We\'ve reduced screening time by 80% while improving candidate quality.',
       avatar: '👩‍💼'
