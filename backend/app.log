@@ -3907,3 +3907,125 @@ Exception: No algorithms available for processing
 2025-10-08 11:50:16,232 - __main__ - INFO - Successfully processed 13 resumes in 31.82s
 2025-10-08 11:50:16,232 - api.middleware - INFO - [req_1759904384_341] 200 - 31.822s
 2025-10-08 11:50:16,232 - werkzeug - INFO - 127.0.0.1 - - [08/Oct/2025 11:50:16] "POST /api/process-resumes HTTP/1.1" 200 -
+2025-10-12 13:42:09,574 - api.error_handlers - INFO - Error handlers registered successfully
+2025-10-12 13:42:09,611 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.104:5000
+2025-10-12 13:42:09,612 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-12 13:42:09,615 - werkzeug - INFO -  * Restarting with stat
+2025-10-12 13:42:23,836 - api.error_handlers - INFO - Error handlers registered successfully
+2025-10-12 13:42:23,865 - werkzeug - WARNING -  * Debugger is active!
+2025-10-12 13:42:23,882 - werkzeug - INFO -  * Debugger PIN: 133-665-231
+2025-10-12 13:43:18,075 - api.middleware - INFO - [req_1760256798_6711] OPTIONS /api/process-resumes - Start
+2025-10-12 13:43:18,077 - api.middleware - INFO - [req_1760256798_6711] 200 - 0.002s
+2025-10-12 13:43:18,083 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 13:43:18] "OPTIONS /api/process-resumes HTTP/1.1" 200 -
+2025-10-12 13:43:18,332 - api.middleware - INFO - [req_1760256798_6711] POST /api/process-resumes - Start
+2025-10-12 13:43:18,448 - __main__ - INFO - Processing request: 13 files, 10 algorithms
+2025-10-12 13:43:18,449 - utils.file_processor - INFO - Processing file 1: _Shikhar_Reyya_Resume.pdf (pdf)
+2025-10-12 13:43:18,794 - utils.file_processor - INFO - Successfully processed file: _Shikhar_Reyya_Resume.pdf (3740 chars)
+2025-10-12 13:43:18,795 - utils.file_processor - INFO - Processing file 2: AJAY_KUMAR_KC_Resume.pdf (pdf)
+2025-10-12 13:43:19,202 - utils.file_processor - INFO - Successfully processed file: AJAY_KUMAR_KC_Resume.pdf (4559 chars)
+2025-10-12 13:43:19,203 - utils.file_processor - INFO - Processing file 3: CHIRAG'S_RESUME.pdf (pdf)
+2025-10-12 13:43:19,570 - utils.file_processor - INFO - Successfully processed file: CHIRAG'S_RESUME.pdf (3638 chars)
+2025-10-12 13:43:19,570 - utils.file_processor - INFO - Processing file 4: Deepanshu Pratik Resume.pdf (pdf)
+2025-10-12 13:43:20,012 - utils.file_processor - INFO - Successfully processed file: Deepanshu Pratik Resume.pdf (5974 chars)
+2025-10-12 13:43:20,013 - utils.file_processor - INFO - Processing file 5: Gautam_Resume.pdf (pdf)
+2025-10-12 13:43:20,347 - utils.file_processor - INFO - Successfully processed file: Gautam_Resume.pdf (3024 chars)
+2025-10-12 13:43:20,347 - utils.file_processor - INFO - Processing file 6: resume_ThakurJaideepSingh (3).pdf (pdf)
+2025-10-12 13:43:20,672 - utils.file_processor - INFO - Successfully processed file: resume_ThakurJaideepSingh (3).pdf (3046 chars)
+2025-10-12 13:43:20,673 - utils.file_processor - INFO - Processing file 7: Resume_VanshJangir.pdf (pdf)
+2025-10-12 13:43:21,009 - utils.file_processor - INFO - Successfully processed file: Resume_VanshJangir.pdf (3118 chars)
+2025-10-12 13:43:21,009 - utils.file_processor - INFO - Processing file 8: resumeDeshaw.pdf (pdf)
+2025-10-12 13:43:21,356 - utils.file_processor - INFO - Successfully processed file: resumeDeshaw.pdf (3880 chars)
+2025-10-12 13:43:21,357 - utils.file_processor - INFO - Processing file 9: Shaurya's Resume.pdf (pdf)
+2025-10-12 13:43:21,624 - utils.file_processor - INFO - Successfully processed file: Shaurya's Resume.pdf (2245 chars)
+2025-10-12 13:43:21,625 - utils.file_processor - INFO - Processing file 10: Soumya-ranjan-resume.pdf (pdf)
+2025-10-12 13:43:22,026 - utils.file_processor - INFO - Successfully processed file: Soumya-ranjan-resume.pdf (3752 chars)
+2025-10-12 13:43:22,026 - utils.file_processor - INFO - Processing file 11: sujal-dinker.pdf (pdf)
+2025-10-12 13:43:22,308 - utils.file_processor - INFO - Successfully processed file: sujal-dinker.pdf (1433 chars)
+2025-10-12 13:43:22,310 - utils.file_processor - INFO - Processing file 12: Toshan_Kanwar_Resume.pdf (pdf)
+2025-10-12 13:43:22,578 - utils.file_processor - INFO - Successfully processed file: Toshan_Kanwar_Resume.pdf (3354 chars)
+2025-10-12 13:43:22,580 - utils.file_processor - INFO - Processing file 13: Vandit_tyagi_resume_latest1.pdf (pdf)
+2025-10-12 13:43:23,030 - utils.file_processor - INFO - Successfully processed file: Vandit_tyagi_resume_latest1.pdf (3222 chars)
+2025-10-12 13:43:23,032 - core.algorithm_manager - INFO - Initializing algorithm: bert
+2025-10-12 13:43:23,033 - algorithms.deep_learning.bert_analyzer - INFO - Loading BERT model: bert-base-uncased
+2025-10-12 13:43:26,906 - algorithms.deep_learning.bert_analyzer - INFO - BERT model loaded successfully
+2025-10-12 13:43:26,910 - core.algorithm_manager - INFO - Algorithm bert initialized successfully
+2025-10-12 13:43:26,911 - core.algorithm_manager - INFO - Initializing algorithm: cosine
+2025-10-12 13:43:26,912 - algorithms.similarity.cosine_similarity - INFO - Cosine similarity analyzer initialized successfully
+2025-10-12 13:43:26,914 - core.algorithm_manager - INFO - Algorithm cosine initialized successfully
+2025-10-12 13:43:26,914 - core.algorithm_manager - INFO - Initializing algorithm: distilbert
+2025-10-12 13:43:26,915 - algorithms.deep_learning.distilbert_analyzer - INFO - DistilBERT device: cpu
+2025-10-12 13:43:26,916 - algorithms.deep_learning.distilbert_analyzer - INFO - Loading DistilBERT...
+2025-10-12 13:43:29,024 - core.algorithm_manager - INFO - Algorithm distilbert initialized successfully
+2025-10-12 13:43:29,026 - core.algorithm_manager - INFO - Initializing algorithm: sbert
+2025-10-12 13:43:29,030 - algorithms.deep_learning.sbert_analyzer - INFO - Loading S-BERT model: sentence-transformers/all-MiniLM-L6-v2
+2025-10-12 13:43:29,033 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-10-12 13:43:30,077 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-10-12 13:43:30,078 - algorithms.deep_learning.sbert_analyzer - INFO - S-BERT model loaded successfully
+2025-10-12 13:43:30,078 - core.algorithm_manager - INFO - Algorithm sbert initialized successfully
+2025-10-12 13:43:30,078 - core.algorithm_manager - INFO - Initializing algorithm: xgboost
+2025-10-12 13:43:30,081 - algorithms.traditional_ml.xgboost_classifier - INFO - Initializing new XGBoost model
+2025-10-12 13:43:30,634 - algorithms.traditional_ml.xgboost_classifier - INFO - XGBoost model initialized with dummy data
+2025-10-12 13:43:30,635 - algorithms.traditional_ml.xgboost_classifier - INFO - XGBoost model ready
+2025-10-12 13:43:30,636 - core.algorithm_manager - INFO - Algorithm xgboost initialized successfully
+2025-10-12 13:43:30,636 - core.algorithm_manager - INFO - Initializing algorithm: random_forest
+2025-10-12 13:43:30,640 - algorithms.traditional_ml.random_forest_classifier - INFO - Initializing new Random Forest model
+2025-10-12 13:43:30,877 - algorithms.traditional_ml.random_forest_classifier - INFO - Random Forest model initialized with dummy data
+2025-10-12 13:43:30,878 - algorithms.traditional_ml.random_forest_classifier - INFO - Random Forest model ready
+2025-10-12 13:43:30,878 - core.algorithm_manager - INFO - Algorithm random_forest initialized successfully
+2025-10-12 13:43:30,880 - core.algorithm_manager - INFO - Initializing algorithm: neural_network
+2025-10-12 13:43:30,881 - algorithms.traditional_ml.neural_network_classifier - INFO - Initializing new Neural Network model
+2025-10-12 13:43:30,964 - algorithms.traditional_ml.neural_network_classifier - INFO - Neural Network model initialized - Loss: 0.0247
+2025-10-12 13:43:30,964 - algorithms.traditional_ml.neural_network_classifier - INFO - Neural Network model ready
+2025-10-12 13:43:30,964 - core.algorithm_manager - INFO - Algorithm neural_network initialized successfully
+2025-10-12 13:43:30,964 - core.algorithm_manager - INFO - Initializing algorithm: svm
+2025-10-12 13:43:30,965 - algorithms.traditional_ml.svm_classifier - INFO - Initializing new SVM model
+2025-10-12 13:43:30,986 - algorithms.traditional_ml.svm_classifier - INFO - SVM model initialized with dummy data
+2025-10-12 13:43:30,987 - algorithms.traditional_ml.svm_classifier - INFO - SVM model ready
+2025-10-12 13:43:30,988 - core.algorithm_manager - INFO - Algorithm svm initialized successfully
+2025-10-12 13:43:30,989 - core.algorithm_manager - INFO - Initializing algorithm: jaccard
+2025-10-12 13:43:30,990 - algorithms.similarity.jaccard_similarity - INFO - BM25 ranking algorithm initialized
+2025-10-12 13:43:30,990 - core.algorithm_manager - INFO - Algorithm jaccard initialized successfully
+2025-10-12 13:43:30,990 - core.algorithm_manager - INFO - Initializing algorithm: ner
+2025-10-12 13:43:30,991 - algorithms.similarity.ner_analyzer - INFO - Loading spaCy model
+2025-10-12 13:43:31,935 - algorithms.similarity.ner_analyzer - INFO - Loaded spaCy model: en_core_web_sm
+2025-10-12 13:43:31,936 - core.algorithm_manager - INFO - Algorithm ner initialized successfully
+2025-10-12 13:43:31,937 - core.algorithm_manager - INFO - Processing 13 resumes with 10 algorithms
+2025-10-12 13:43:32,197 - algorithms.base_algorithm - INFO - cosine processed 13 resumes in 0.23s
+2025-10-12 13:43:32,202 - core.algorithm_manager - INFO - Completed processing with cosine
+2025-10-12 13:43:32,272 - algorithms.base_algorithm - INFO - xgboost processed 13 resumes in 0.07s
+2025-10-12 13:43:32,276 - core.algorithm_manager - INFO - Completed processing with xgboost
+2025-10-12 13:43:34,883 - algorithms.base_algorithm - INFO - random_forest processed 13 resumes in 2.61s
+2025-10-12 13:43:34,918 - core.algorithm_manager - INFO - Completed processing with random_forest
+2025-10-12 13:43:34,937 - algorithms.base_algorithm - INFO - neural_network processed 13 resumes in 0.05s
+2025-10-12 13:43:34,960 - core.algorithm_manager - INFO - Completed processing with neural_network
+2025-10-12 13:43:35,000 - algorithms.base_algorithm - INFO - svm processed 13 resumes in 0.06s
+2025-10-12 13:43:35,003 - algorithms.similarity.jaccard_similarity - INFO - BM25 - Raw:10.09, Normalized:0.00, Coverage:0.05, Phrases:4, Final:0.21
+2025-10-12 13:43:35,006 - algorithms.similarity.jaccard_similarity - INFO - BM25 - Raw:14.57, Normalized:0.00, Coverage:0.08, Phrases:3, Final:0.24
+2025-10-12 13:43:35,006 - core.algorithm_manager - INFO - Completed processing with svm
+2025-10-12 13:43:35,007 - algorithms.similarity.jaccard_similarity - INFO - BM25 - Raw:8.16, Normalized:0.00, Coverage:0.04, Phrases:1, Final:0.11
+2025-10-12 13:43:35,017 - algorithms.similarity.jaccard_similarity - INFO - BM25 - Raw:10.15, Normalized:0.00, Coverage:0.06, Phrases:3, Final:0.21
+2025-10-12 13:43:35,022 - algorithms.similarity.jaccard_similarity - INFO - BM25 - Raw:9.99, Normalized:0.00, Coverage:0.05, Phrases:3, Final:0.19
+2025-10-12 13:43:35,027 - algorithms.similarity.jaccard_similarity - INFO - BM25 - Raw:10.72, Normalized:0.00, Coverage:0.05, Phrases:7, Final:0.31
+2025-10-12 13:43:35,034 - algorithms.similarity.jaccard_similarity - INFO - BM25 - Raw:8.69, Normalized:0.00, Coverage:0.04, Phrases:4, Final:0.19
+2025-10-12 13:43:35,036 - algorithms.similarity.jaccard_similarity - INFO - BM25 - Raw:12.08, Normalized:0.00, Coverage:0.06, Phrases:2, Final:0.19
+2025-10-12 13:43:35,042 - algorithms.similarity.jaccard_similarity - INFO - BM25 - Raw:6.58, Normalized:0.00, Coverage:0.03, Phrases:0, Final:0.10
+2025-10-12 13:43:35,047 - algorithms.similarity.jaccard_similarity - INFO - BM25 - Raw:8.67, Normalized:0.00, Coverage:0.04, Phrases:1, Final:0.17
+2025-10-12 13:43:35,050 - algorithms.similarity.jaccard_similarity - INFO - BM25 - Raw:5.00, Normalized:0.00, Coverage:0.02, Phrases:2, Final:0.11
+2025-10-12 13:43:35,054 - algorithms.similarity.jaccard_similarity - INFO - BM25 - Raw:11.48, Normalized:0.00, Coverage:0.06, Phrases:4, Final:0.29
+2025-10-12 13:43:35,060 - algorithms.similarity.jaccard_similarity - INFO - BM25 - Raw:6.73, Normalized:0.00, Coverage:0.03, Phrases:0, Final:0.10
+2025-10-12 13:43:35,062 - algorithms.base_algorithm - INFO - jaccard processed 13 resumes in 0.06s
+2025-10-12 13:43:35,078 - core.algorithm_manager - INFO - Completed processing with jaccard
+2025-10-12 13:43:38,015 - algorithms.base_algorithm - INFO - ner processed 13 resumes in 2.95s
+2025-10-12 13:43:38,017 - core.algorithm_manager - INFO - Completed processing with ner
+2025-10-12 13:43:42,629 - algorithms.base_algorithm - INFO - sbert processed 13 resumes in 10.59s
+2025-10-12 13:43:42,630 - core.algorithm_manager - INFO - Completed processing with sbert
+2025-10-12 13:43:52,460 - algorithms.base_algorithm - INFO - distilbert processed 13 resumes in 20.45s
+2025-10-12 13:43:52,461 - core.algorithm_manager - INFO - Completed processing with distilbert
+2025-10-12 13:44:10,051 - algorithms.base_algorithm - INFO - bert processed 13 resumes in 38.11s
+2025-10-12 13:44:10,058 - core.algorithm_manager - INFO - Completed processing with bert
+2025-10-12 13:44:10,080 - __main__ - INFO - Successfully processed 13 resumes in 51.74s
+2025-10-12 13:44:10,121 - api.middleware - INFO - [req_1760256798_6711] 200 - 51.789s
+2025-10-12 13:44:10,148 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 13:44:10] "POST /api/process-resumes HTTP/1.1" 200 -
