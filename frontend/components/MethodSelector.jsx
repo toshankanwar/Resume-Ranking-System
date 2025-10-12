@@ -32,15 +32,6 @@ export default function MethodSelector({ selectedMethods, setSelectedMethods }) 
           color: 'from-indigo-500 to-purple-500',
           features: ['Sentence-level', 'Similarity optimized', 'Embeddings'],
           speed: 'Fast'
-        },
-        { 
-          id: 'xlm', 
-          name: 'XLM Cross-Lingual', 
-          desc: 'Multi-language support for diverse international resumes',
-          icon: Globe,
-          color: 'from-purple-500 to-pink-500',
-          features: ['Multi-language', 'Cross-lingual', 'Global support'],
-          speed: 'Medium'
         }
       ]
     },
