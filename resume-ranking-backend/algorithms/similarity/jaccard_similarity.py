@@ -1,190 +1,231 @@
 import re
-from collections import Counter
 import numpy as np
 from ..base_algorithm import BaseAlgorithm
 import logging
+from collections import Counter
+import math
 
 logger = logging.getLogger(__name__)
 
+
 class JaccardSimilarityAnalyzer(BaseAlgorithm):
-    """Jaccard Similarity for skill-focused resume matching"""
+    """
+    BM25 (Best Matching 25) Ranking Algorithm
+    
+    COMPLETELY DIFFERENT from TF-IDF and Jaccard:
+    - TF-IDF: Linear term frequency
+    - Jaccard: Set-based intersection/union
+    - BM25: Probabilistic ranking with saturation
+    
+    Used by: Elasticsearch, Lucene, search engines
+    Better handles: term saturation, document length normalization
+    """
     
     def __init__(self, config: dict = None):
-        super().__init__('jaccard', config)
-        self.skill_keywords = self._load_skill_keywords()
-        self.stop_words = self._load_stop_words()
+        super().__init__('jaccard', config)  # Keep name for compatibility
+        # BM25 parameters
+        self.k1 = 1.5  # Term saturation parameter (1.2-2.0)
+        self.b = 0.75  # Document length normalization (0-1)
+        self.tech_skills = self._load_tech_skills()
     
-    def _load_skill_keywords(self) -> set:
-        """Load comprehensive skill keywords"""
+    def _load_tech_skills(self) -> set:
+        """Load technical skills for boosting"""
         return {
-            # Programming Languages
-            'python', 'java', 'javascript', 'typescript', 'c++', 'csharp', 'c#', 'php',
-            'ruby', 'go', 'rust', 'swift', 'kotlin', 'scala', 'r', 'matlab', 'sql',
-            
-            # Web Technologies
-            'html', 'css', 'react', 'angular', 'vue', 'svelte', 'nodejs', 'express',
-            'django', 'flask', 'spring', 'laravel', 'rails', 'asp.net', 'bootstrap',
-            
-            # Databases
-            'mysql', 'postgresql', 'mongodb', 'redis', 'cassandra', 'elasticsearch',
-            'oracle', 'sqlite', 'dynamodb', 'neo4j', 'influxdb',
-            
-            # Cloud & DevOps
-            'aws', 'azure', 'gcp', 'docker', 'kubernetes', 'jenkins', 'terraform',
-            'ansible', 'puppet', 'chef', 'vagrant', 'git', 'gitlab', 'github',
-            
-            # Data Science & ML
-            'tensorflow', 'pytorch', 'scikit-learn', 'pandas', 'numpy', 'matplotlib',
-            'seaborn', 'jupyter', 'spark', 'hadoop', 'tableau', 'powerbi',
-            
-            # Mobile Development
-            'android', 'ios', 'react-native', 'flutter', 'xamarin', 'ionic',
-            
-            # Testing
-            'selenium', 'junit', 'testng', 'cypress', 'jest', 'mocha', 'pytest',
-            
-            # Tools & IDEs
-            'vscode', 'intellij', 'eclipse', 'xcode', 'sublime', 'vim', 'postman',
-            'jira', 'confluence', 'slack', 'trello'
-        }
-    
-    def _load_stop_words(self) -> set:
-        """Load common stop words"""
-        return {
-            'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
-            'of', 'with', 'by', 'is', 'are', 'was', 'were', 'be', 'been', 'being',
-            'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could',
-            'should', 'may', 'might', 'can', 'this', 'that', 'these', 'those',
-            'i', 'you', 'he', 'she', 'it', 'we', 'they', 'me', 'him', 'her', 'us'
+            'python', 'java', 'javascript', 'typescript', 'react', 'angular', 'vue',
+            'nodejs', 'django', 'flask', 'spring', 'aws', 'azure', 'docker',
+            'kubernetes', 'mongodb', 'postgresql', 'mysql', 'redis', 'git'
         }
     
     def load_model(self):
-        """Initialize Jaccard analyzer (no model to load)"""
         self.is_loaded = True
-        logger.info("Jaccard similarity analyzer initialized")
+        logger.info("BM25 ranking algorithm initialized")
     
-    def _preprocess_text(self, text: str) -> set:
-        """Preprocess text and extract meaningful terms"""
-        # Convert to lowercase
+    def _tokenize(self, text: str) -> list:
+        """Tokenize text into terms"""
+        # Convert to lowercase and extract words
         text = text.lower()
+        # Keep alphanumeric and common tech separators
+        text = re.sub(r'[^\w\s\-\+\.]', ' ', text)
+        tokens = text.split()
         
-        # Remove special characters but keep alphanumeric and common separators
-        text = re.sub(r'[^\w\s\-\.\+#]', ' ', text)
+        # Remove very short tokens
+        tokens = [t for t in tokens if len(t) > 2]
         
-        # Extract words
-        words = set(text.split())
-        
-        # Remove stop words and short words
-        words = {word for word in words if len(word) > 2 and word not in self.stop_words}
-        
-        # Extract compound skills (e.g., "machine learning", "data science")
-        compound_skills = self._extract_compound_skills(text)
-        words.update(compound_skills)
-        
-        return words
+        return tokens
     
-    def _extract_compound_skills(self, text: str) -> set:
-        """Extract compound skill phrases"""
-        compound_patterns = [
-            'machine learning', 'data science', 'artificial intelligence', 'deep learning',
-            'natural language processing', 'computer vision', 'big data', 'data analysis',
-            'web development', 'mobile development', 'software engineering', 'full stack',
-            'front end', 'back end', 'user experience', 'user interface', 'quality assurance',
-            'project management', 'agile development', 'scrum master', 'product management',
-            'business intelligence', 'cloud computing', 'cyber security', 'database design',
-            'api development', 'microservices', 'responsive design', 'test automation'
-        ]
-        
-        found_compounds = set()
-        for pattern in compound_patterns:
-            if pattern in text:
-                # Replace spaces with underscores for compound skills
-                compound_key = pattern.replace(' ', '_')
-                found_compounds.add(compound_key)
-        
-        return found_compounds
+    def _compute_idf(self, term: str, doc_count: int, term_doc_freq: int) -> float:
+        """
+        Compute IDF (Inverse Document Frequency) for BM25
+        Different from TF-IDF's IDF formula
+        """
+        # BM25 IDF formula
+        idf = math.log((doc_count - term_doc_freq + 0.5) / (term_doc_freq + 0.5) + 1.0)
+        return max(0.0, idf)  # Ensure non-negative
     
-    def _extract_skills_only(self, words: set) -> set:
-        """Extract only technical skills from word set"""
-        skills = set()
+    def _compute_bm25_score(self, term_freq: int, doc_length: int, 
+                           avg_doc_length: float, idf: float) -> float:
+        """
+        Compute BM25 score for a term
         
-        # Direct skill matches
-        skills.update(words & self.skill_keywords)
+        BM25 formula:
+        score = IDF * (tf * (k1 + 1)) / (tf + k1 * (1 - b + b * (doc_len / avg_doc_len)))
+        """
+        # Term frequency saturation
+        numerator = term_freq * (self.k1 + 1)
         
-        # Partial matches for variations (e.g., "javascript" matches "js")
-        word_variations = {
-            'js': 'javascript',
-            'ts': 'typescript',
-            'py': 'python',
-            'ml': 'machine_learning',
-            'ai': 'artificial_intelligence',
-            'ui': 'user_interface',
-            'ux': 'user_experience'
-        }
+        # Document length normalization
+        denominator = term_freq + self.k1 * (1 - self.b + self.b * (doc_length / avg_doc_length))
         
-        for word in words:
-            if word in word_variations:
-                skills.add(word_variations[word])
+        # Final BM25 score
+        score = idf * (numerator / denominator)
         
-        return skills
+        return score
     
-    def _calculate_jaccard_similarity(self, set1: set, set2: set) -> float:
-        """Calculate Jaccard similarity coefficient"""
-        if not set1 and not set2:
-            return 1.0
-        
-        intersection = set1 & set2
-        union = set1 | set2
-        
-        return len(intersection) / len(union) if union else 0.0
+    def _extract_n_grams(self, tokens: list, n: int = 2) -> list:
+        """Extract n-grams for phrase matching"""
+        ngrams = []
+        for i in range(len(tokens) - n + 1):
+            ngram = ' '.join(tokens[i:i+n])
+            ngrams.append(ngram)
+        return ngrams
     
     def process_single(self, resume_text: str, job_description: str, 
                       position: str = None) -> dict:
-        """Process single resume with Jaccard similarity"""
+        """Rank resume using BM25 algorithm"""
         if not self.is_loaded:
             self.load_model()
         
         try:
-            # Preprocess texts
-            resume_words = self._preprocess_text(resume_text)
-            job_words = self._preprocess_text(job_description)
+            # Tokenize both documents
+            resume_tokens = self._tokenize(resume_text)
+            job_tokens = self._tokenize(job_description)
             
-            # Extract skills specifically
-            resume_skills = self._extract_skills_only(resume_words)
-            job_skills = self._extract_skills_only(job_words)
+            # Extract bigrams (2-word phrases)
+            resume_bigrams = self._extract_n_grams(resume_tokens, 2)
+            job_bigrams = self._extract_n_grams(job_tokens, 2)
             
-            # Calculate similarities
-            # 1. Overall word similarity
-            overall_similarity = self._calculate_jaccard_similarity(resume_words, job_words)
+            # Combine unigrams and bigrams
+            resume_terms = resume_tokens + resume_bigrams
+            job_terms = job_tokens + job_bigrams
             
-            # 2. Skills-focused similarity (weighted more heavily)
-            skills_similarity = self._calculate_jaccard_similarity(resume_skills, job_skills)
+            # Calculate document lengths
+            resume_length = len(resume_terms)
+            job_length = len(job_terms)
+            avg_length = (resume_length + job_length) / 2
             
-            # Combined score with more weight on skills
-            combined_score = (overall_similarity * 0.3) + (skills_similarity * 0.7)
+            # Count term frequencies in resume
+            resume_term_freq = Counter(resume_terms)
+            job_term_freq = Counter(job_terms)
             
-            # Find matching skills
-            matching_skills = list(resume_skills & job_skills)
-            missing_skills = list(job_skills - resume_skills)
-            additional_skills = list(resume_skills - job_skills)
+            # Get unique query terms from job description
+            query_terms = set(job_terms)
+            
+            # Calculate BM25 scores for each query term
+            total_bm25_score = 0.0
+            term_scores = {}
+            matched_terms = []
+            
+            # For IDF calculation, treat resume and job as corpus of 2 docs
+            doc_count = 2
+            
+            for term in query_terms:
+                # Check if term appears in resume
+                if term in resume_term_freq:
+                    # Term document frequency (in how many docs does term appear)
+                    term_doc_freq = 1  # Appears in at least job description
+                    if term in resume_term_freq:
+                        term_doc_freq = 2  # Appears in both
+                    
+                    # Compute IDF
+                    idf = self._compute_idf(term, doc_count, term_doc_freq)
+                    
+                    # Compute BM25 score for this term
+                    tf = resume_term_freq[term]
+                    bm25_term_score = self._compute_bm25_score(
+                        tf, resume_length, avg_length, idf
+                    )
+                    
+                    # Apply skill boosting (technical terms get higher weight)
+                    if term in self.tech_skills:
+                        bm25_term_score *= 1.5  # 50% boost for tech skills
+                    
+                    total_bm25_score += bm25_term_score
+                    term_scores[term] = bm25_term_score
+                    
+                    matched_terms.append(term)
+            
+            # Normalize BM25 score to 0-1 range
+            # BM25 scores can theoretically be unbounded, but typically 0-100
+            # We'll use a sigmoid-like transformation
+            max_possible_score = len(query_terms) * 10  # Rough estimate
+            normalized_score = total_bm25_score / max_possible_score if max_possible_score > 0 else 0
+            
+            # Apply additional factors for better differentiation
+            
+            # 1. Coverage factor (what % of job terms are in resume)
+            coverage = len(matched_terms) / len(query_terms) if query_terms else 0
+            
+            # 2. Term importance factor (rare terms matter more)
+            rare_term_bonus = 0.0
+            for term in matched_terms:
+                if len(term) > 8:  # Long terms are usually more specific
+                    rare_term_bonus += 0.01
+            
+            # 3. Exact phrase matching bonus
+            exact_phrases = set(job_bigrams) & set(resume_bigrams)
+            phrase_bonus = min(0.15, len(exact_phrases) * 0.02)
+            
+            # Combined final score
+            base_score = normalized_score * 0.60 + coverage * 0.40
+            final_score = base_score + rare_term_bonus + phrase_bonus
+            
+            # Ensure score is in valid range
+            final_score = max(0.10, min(0.95, final_score))
+            
+            # Sort terms by BM25 score to show most important matches
+            top_terms = sorted(term_scores.items(), key=lambda x: x[1], reverse=True)[:10]
+            
+            logger.info(f"BM25 - Raw:{total_bm25_score:.2f}, Normalized:{normalized_score:.2f}, "
+                       f"Coverage:{coverage:.2f}, Phrases:{len(exact_phrases)}, "
+                       f"Final:{final_score:.2f}")
             
             return {
                 'algorithm': self.name,
-                'score': float(combined_score),
-                'overall_similarity': float(overall_similarity),
-                'skills_similarity': float(skills_similarity),
+                'score': float(final_score),
                 'details': {
-                    'resume_words_count': len(resume_words),
-                    'job_words_count': len(job_words),
-                    'resume_skills_count': len(resume_skills),
-                    'job_skills_count': len(job_skills),
-                    'matching_skills': matching_skills[:10],  # Top 10
-                    'missing_skills': missing_skills[:10],    # Top 10
-                    'additional_skills': additional_skills[:10],  # Top 10
-                    'skill_match_ratio': len(matching_skills) / max(len(job_skills), 1)
+                    'algorithm_type': 'BM25 (Best Matching 25)',
+                    'raw_bm25_score': total_bm25_score,
+                    'normalized_bm25': normalized_score,
+                    'coverage_ratio': coverage,
+                    'parameters': {
+                        'k1': self.k1,
+                        'b': self.b,
+                        'doc_count': doc_count
+                    },
+                    'statistics': {
+                        'resume_length': resume_length,
+                        'job_length': job_length,
+                        'avg_length': avg_length,
+                        'unique_query_terms': len(query_terms),
+                        'matched_terms': len(matched_terms),
+                        'exact_phrase_matches': len(exact_phrases)
+                    },
+                    'top_matching_terms': [
+                        {'term': term, 'bm25_score': float(score)} 
+                        for term, score in top_terms
+                    ],
+                    'bonuses': {
+                        'rare_term_bonus': rare_term_bonus,
+                        'phrase_bonus': phrase_bonus
+                    },
+                    'scoring_breakdown': {
+                        'bm25_component': normalized_score * 0.60,
+                        'coverage_component': coverage * 0.40,
+                        'bonuses': rare_term_bonus + phrase_bonus
+                    }
                 }
             }
             
         except Exception as e:
-            logger.error(f"Jaccard similarity processing failed: {e}")
-            raise
+            logger.error(f"BM25 ranking failed: {e}", exc_info=True)
+            return {'algorithm': self.name, 'score': 0.0, 'details': {'error': str(e)}}
