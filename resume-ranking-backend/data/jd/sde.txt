@@ -1,0 +1,29 @@
+Title: Software Engineer
+Location:  Gurgaon, India
+                                                         Job Description
+Who We Are:
+Fareportal is a travel technology company powering a next-generation travel concierge service. Utilizing its innovative technology and company owned and operated global contact centres, Fareportal has built strong industry partnerships providing customers access to over 500 airlines, a million lodgings, and hundreds of car rental companies around the globe. With a portfolio of consumer travel brands including CheapOair and OneTravel, Fareportal enables consumers to book-online, on mobile apps for iOS and Android, by phone, or live chat. Fareportal provides its airline partners with access to a broad customer base that books high-yielding international travel and add-on ancillaries.
+HIGHLIGHTS:
+•	Fareportal is the number 1 privately held online travel company in flight volume.
+•	Fareportal partners with over 500 airlines, 1 million lodgings, and hundreds of car rental companies worldwide.
+•	2019 annual sales exceeded $5 billion.
+•	Fareportal sees over 150 million unique visitors annually to our desktop and mobile sites.
+•	Fareportal, with its global workforce of over 2,600 employees, is strategically positioned with 9 offices in 6 countries and headquartered in New York City.
+
+Role Description
+We are seeking a Software Engineer who will manage project goals, contribute to product strategy and help define best practices. The right candidate will join a self-sufficient offshore team responsible for developing and maintaining components of a complex proprietary e-commerce platform that drives the air travel industry. The right candidate will also have opportunities to collaborate with teams in NY and other locations around the world.
+•	Design develop and support cutting edge, rock solid technology products.
+•	Develop and deliver high quality, clean and maintainable code.
+•	Develop applications with strong requirements of High Load and Scalability.
+•	Collaborate with business teams to understand objectives.
+Required Qualifications
+•	Exposure of designing and implementing applications using an OOP language.
+•	Minimum 6months of experience of .Net programming and systems design.
+•	Attention to detail and a passion for producing high quality software.
+•	Experience in C# / .Net Framework using Visual Studio.
+•	Experience in JavaScript & jQuery. Experience in Microsoft SQL Server.
+•	Understanding and practical usage of software development principles (i.e SOLID, DRY, YAGNI, KISS etc.)
+•	Excellent Communication skills.
+
+Preferred Qualifications
+•	Exposure in Reactjs, .net Core, Angular.

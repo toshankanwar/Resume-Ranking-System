@@ -1,0 +1,79 @@
+SDE 1 - DoubleTick.io (Conversational CRM powered by
+Meta WhatsApp's API)
+About the Role
+We are seeking a passionate and experienced SDE 1 to join our team and take ownership of
+building high-quality, scalable, and performant user interfaces. In this role, you will work
+closely with product managers, designers, and backend engineers to deliver seamless and
+engaging user experiences.
+You will be responsible for designing and implementing robust frontend architectures,
+optimizing performance, and ensuring best coding practices.
+This is a great opportunity for someone who enjoys solving complex problems, working
+on cutting-edge technologies, and having a direct impact on product growth.
+Key Responsibilities
+● Create and maintain Cypress end-to-end tests for UI reliability.
+● Debug and resolve complex issues using advanced browser and bug
+● Develop and maintain React.js + TypeScript applications with Material UI
+tracing tools. (MUI) and custom theming.
+● Collaborate with backend, design, and product teams to deliver features
+● Architect modular, scalable solutions following SOLID principles and clean
+end-to-end. architecture.
+● Participate in peer reviews to maintain code quality
+● Manage state efficiently using Zotai and React Query.
+● Implement Role-Based Access Control (RBAC) for secure feature and
+route-level permissions.
+● Integrate WebSockets, WebRTC, and SIP for real-time features.
+● Build secure authentication flows with Firebase Authentication.
+● Optimize performance using Lighthouse audits and best practices.
+● Create and maintain Cypress end-to-end tests for UI reliability.
+Required Skills and Qualifications
+● Experience of frontend development in production-grade products. Proven track
+record of building applications from scratch.
+● Exposure to high-performance, real-time applications.
+● Familiarity with Jira, Linear, or similar issue-tracking tools.
+● Expert in React.js, TypeScript, React Hooks, and MUI component theming.
+● Proficient with Zotai, React Query, and state management best practices.
+● Strong sense of ownership and able to work effectively both independently and
+within a team.
+● Solid understanding of RBAC, WebSockets, WebRTC, SIP, and Firebase Auth.
+● Skilled in Cypress testing and performance optimization.
+● Strong debugging and problem-solving ability.
+● Ability to work effectively in large, modular codebases.
+What We Offer
+● Competitive salary and benefits package.
+● A dynamic and inclusive work environment.
+● Opportunities for professional growth and development.
+● A chance to work on cutting-edge technologies.
+About Us:
+Apport Software Solutions Private Limited is a dynamic and innovative SaaS-based
+product company offering conversational commerce and empowering global brands
+with scalable personal commerce and relationship-led sales on WhatsApp.
+Founded in 2017 with a vision to enable global brands to win more customers using
+simple yet robust technology on mobile, we are now a 100+ member strong
+organization with 7000+ customers across 140+ countries using our technology to grow
+digitally.
+Backed by Silicon Valley investors, Info Edge Ventures, and BEENEXT Asia, we are
+headquartered in Mumbai, India.
+QuickSell:
+QuickSell is a sales acceleration commerce suite started in 2017 with the vision to
+empower businesses to translate conversations into conversions on customer-first
+channels like WhatsApp through assisted personal commerce.
+Today, over 7000+ businesses from 109+ countries use QuickSell to accelerate the
+process of sharing complete and accurate product information with customers and
+business stakeholders for dynamic product showcasing and order booking over
+WhatsApp.
+🔗 https://quicksell.co
+DoubleTick:
+DoubleTick is a mobile-first conversational CRM built on top of the WhatsApp
+Business API to unlock WhatsApp's marketing and sales capabilities.
+Key features include:
+● Central team inbox
+● Bulk broadcasting & analytics
+● Bot studio
+● Commerce & cataloging
+● Chatbots
+● Role-based access
+Backed by InfoEdge Ventures and BeeNext Singapore, DoubleTick serves over 10,000+
+businesses in India and UAE across 100+ verticals. Brands using DoubleTick include
+MakeMyTrip, Royal Enfield, CoinDCX, Tarun Tahiliani, Times Media, GRT Jewellers,
+Malabar Gold and Diamonds, Jaro, SabyaSachi, DarGlobal and more. For more details,
+check out our website: https://doubletick.io

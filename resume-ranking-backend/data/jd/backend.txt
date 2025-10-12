@@ -1,0 +1,75 @@
+SDE 1 - DoubleTick.io (Conversational CRM powered by
+Meta WhatsApp's API)
+About the Role
+We are seeking a highly skilled SDE 1 to join our engineering team and play a key role in
+designing, building, and scaling our backend systems. In this role, you will work on
+developing robust, secure, and high-performance APIs and services that power our
+products.
+You’ll collaborate closely with frontend engineers, product managers, and DevOps teams to
+architect scalable solutions, ensure seamless integrations, and deliver a smooth user
+experience. This is a hands-on development role where you will also contribute to
+architectural decisions, mentor junior developers, and work on optimizing performance for
+large-scale applications.
+Key Responsibilities
+● Architect, build, and scale distributed backend services using TypeScript, Node.js,
+and NestJS.
+● Work with Redis queues, AWS SQS, and AWS Lambda to build asynchronous,
+event-driven systems.
+● Design and manage relational and non-relational databases including PostgreSQL
+and Amazon Neptune (Graph DB).
+● Integrate and maintain Elasticsearch for high-performance search and analytics use
+cases.
+● Collaborate with cross-functional teams to design, implement, and ship end-to-end
+features.
+● Drive performance tuning, system reliability, scalability, and maintainability.
+● Contribute to improving our CI/CD pipelines and infrastructure practices.
+Required Skills and Qualifications
+● B.E./B.Tech or M.Tech in Computer Science, Engineering, or related field.
+● Strong expertise in JavaScript/TypeScript and backend frameworks, especially
+NestJS.
+● Proven experience working with cloud-native services on AWS, including Lambda,
+SQS, and Neptune.
+● Deep understanding of Redis, queues, and distributed system design.
+● Familiarity with Elasticsearch and real-time data processing patterns.
+● Strong system design skills with a focus on performance and scalability.
+● Experience with CI/CD pipelines and DevOps practices.
+● Excellent problem-solving, communication, and leadership abilities.
+What We Offer
+● Competitive salary and benefits package.
+● A dynamic and inclusive work environment.
+● Opportunities for professional growth and development.
+● A chance to work on cutting-edge technologies.
+About Us:
+Apport Software Solutions Private Limited is a dynamic and innovative SaaS-based
+product company offering conversational commerce and empowering global brands
+with scalable personal commerce and relationship-led sales on WhatsApp.
+Founded in 2017 with a vision to enable global brands to win more customers using
+simple yet robust technology on mobile, we are now a 100+ member strong
+organization with 7000+ customers across 140+ countries using our technology to grow
+digitally.
+Backed by Silicon Valley investors, Info Edge Ventures, and BEENEXT Asia, we are
+headquartered in Mumbai, India.
+QuickSell:
+QuickSell is a sales acceleration commerce suite started in 2017 with the vision to
+empower businesses to translate conversations into conversions on customer-first
+channels like WhatsApp through assisted personal commerce.
+Today, over 7000+ businesses from 109+ countries use QuickSell to accelerate the
+process of sharing complete and accurate product information with customers and
+business stakeholders for dynamic product showcasing and order booking over
+WhatsApp.
+🔗 https://quicksell.co
+DoubleTick:
+DoubleTick is a mobile-first conversational CRM built on top of the WhatsApp
+Business API to unlock WhatsApp's marketing and sales capabilities.
+Key features include:
+● Central team inbox
+● Bulk broadcasting & analytics
+● Bot studio
+● Commerce & cataloging
+● Chatbots
+● Role-based access
+Backed by InfoEdge Ventures and BeeNext Singapore, DoubleTick serves over 10,000+
+businesses in India and UAE across 100+ verticals. Brands using DoubleTick include
+MakeMyTrip, Royal Enfield, CoinDCX, Tarun Tahiliani, Times Media, GRT Jewellers,
+Malabar Gold and Diamonds, Jaro, SabyaSachi, DarGlobal and more. For more details,
+check out our website: https://doubletick.io
