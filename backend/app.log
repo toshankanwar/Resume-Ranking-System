@@ -4029,3 +4029,73 @@ Exception: No algorithms available for processing
 2025-10-12 13:44:10,080 - __main__ - INFO - Successfully processed 13 resumes in 51.74s
 2025-10-12 13:44:10,121 - api.middleware - INFO - [req_1760256798_6711] 200 - 51.789s
 2025-10-12 13:44:10,148 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 13:44:10] "POST /api/process-resumes HTTP/1.1" 200 -
+2025-11-25 22:14:50,929 - api.error_handlers - INFO - Error handlers registered successfully
+2025-11-25 22:14:51,005 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.108:5000
+2025-11-25 22:14:51,005 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-11-25 22:14:51,011 - werkzeug - INFO -  * Restarting with stat
+2025-11-25 22:14:56,256 - api.error_handlers - INFO - Error handlers registered successfully
+2025-11-25 22:14:56,263 - werkzeug - WARNING -  * Debugger is active!
+2025-11-25 22:14:56,277 - werkzeug - INFO -  * Debugger PIN: 133-665-231
+2025-11-25 22:17:01,002 - api.middleware - INFO - [req_1764089221_5519] OPTIONS /api/process-resumes - Start
+2025-11-25 22:17:01,002 - api.middleware - INFO - [req_1764089221_5519] 200 - 0.000s
+2025-11-25 22:17:01,013 - werkzeug - INFO - 127.0.0.1 - - [25/Nov/2025 22:17:01] "OPTIONS /api/process-resumes HTTP/1.1" 200 -
+2025-11-25 22:17:01,262 - api.middleware - INFO - [req_1764089221_5519] POST /api/process-resumes - Start
+2025-11-25 22:17:01,470 - __main__ - INFO - Processing request: 13 files, 4 algorithms
+2025-11-25 22:17:01,475 - utils.file_processor - INFO - Processing file 1: _Shikhar_Reyya_Resume.pdf (pdf)
+2025-11-25 22:17:02,228 - utils.file_processor - INFO - Successfully processed file: _Shikhar_Reyya_Resume.pdf (3740 chars)
+2025-11-25 22:17:02,232 - utils.file_processor - INFO - Processing file 2: AJAY_KUMAR_KC_Resume.pdf (pdf)
+2025-11-25 22:17:02,926 - utils.file_processor - INFO - Successfully processed file: AJAY_KUMAR_KC_Resume.pdf (4559 chars)
+2025-11-25 22:17:02,926 - utils.file_processor - INFO - Processing file 3: CHIRAG'S_RESUME.pdf (pdf)
+2025-11-25 22:17:03,771 - utils.file_processor - INFO - Successfully processed file: CHIRAG'S_RESUME.pdf (3638 chars)
+2025-11-25 22:17:03,775 - utils.file_processor - INFO - Processing file 4: Deepanshu Pratik Resume.pdf (pdf)
+2025-11-25 22:17:04,998 - utils.file_processor - INFO - Successfully processed file: Deepanshu Pratik Resume.pdf (5974 chars)
+2025-11-25 22:17:05,000 - utils.file_processor - INFO - Processing file 5: Gautam_Resume.pdf (pdf)
+2025-11-25 22:17:05,701 - utils.file_processor - INFO - Successfully processed file: Gautam_Resume.pdf (3024 chars)
+2025-11-25 22:17:05,707 - utils.file_processor - INFO - Processing file 6: resume_ThakurJaideepSingh (3).pdf (pdf)
+2025-11-25 22:17:06,384 - utils.file_processor - INFO - Successfully processed file: resume_ThakurJaideepSingh (3).pdf (3046 chars)
+2025-11-25 22:17:06,384 - utils.file_processor - INFO - Processing file 7: Resume_VanshJangir.pdf (pdf)
+2025-11-25 22:17:06,997 - utils.file_processor - INFO - Successfully processed file: Resume_VanshJangir.pdf (3118 chars)
+2025-11-25 22:17:07,001 - utils.file_processor - INFO - Processing file 8: resumeDeshaw.pdf (pdf)
+2025-11-25 22:17:07,667 - utils.file_processor - INFO - Successfully processed file: resumeDeshaw.pdf (3880 chars)
+2025-11-25 22:17:07,671 - utils.file_processor - INFO - Processing file 9: Shaurya's Resume.pdf (pdf)
+2025-11-25 22:17:08,301 - utils.file_processor - INFO - Successfully processed file: Shaurya's Resume.pdf (2245 chars)
+2025-11-25 22:17:08,309 - utils.file_processor - INFO - Processing file 10: Soumya-ranjan-resume.pdf (pdf)
+2025-11-25 22:17:10,568 - utils.file_processor - INFO - Successfully processed file: Soumya-ranjan-resume.pdf (3752 chars)
+2025-11-25 22:17:10,568 - utils.file_processor - INFO - Processing file 11: sujal-dinker.pdf (pdf)
+2025-11-25 22:17:11,262 - utils.file_processor - INFO - Successfully processed file: sujal-dinker.pdf (1433 chars)
+2025-11-25 22:17:11,271 - utils.file_processor - INFO - Processing file 12: Toshan_Kanwar_Resume.pdf (pdf)
+2025-11-25 22:17:11,903 - utils.file_processor - INFO - Successfully processed file: Toshan_Kanwar_Resume.pdf (3354 chars)
+2025-11-25 22:17:11,903 - utils.file_processor - INFO - Processing file 13: Vandit_tyagi_resume_latest1.pdf (pdf)
+2025-11-25 22:17:12,715 - utils.file_processor - INFO - Successfully processed file: Vandit_tyagi_resume_latest1.pdf (3222 chars)
+2025-11-25 22:17:12,720 - core.algorithm_manager - INFO - Initializing algorithm: bert
+2025-11-25 22:17:12,722 - algorithms.deep_learning.bert_analyzer - INFO - Loading BERT model: bert-base-uncased
+2025-11-25 22:17:21,773 - algorithms.deep_learning.bert_analyzer - INFO - BERT model loaded successfully
+2025-11-25 22:17:21,782 - core.algorithm_manager - INFO - Algorithm bert initialized successfully
+2025-11-25 22:17:21,786 - core.algorithm_manager - INFO - Initializing algorithm: cosine
+2025-11-25 22:17:21,788 - algorithms.similarity.cosine_similarity - INFO - Cosine similarity analyzer initialized successfully
+2025-11-25 22:17:21,789 - core.algorithm_manager - INFO - Algorithm cosine initialized successfully
+2025-11-25 22:17:21,792 - core.algorithm_manager - INFO - Initializing algorithm: sbert
+2025-11-25 22:17:21,794 - algorithms.deep_learning.sbert_analyzer - INFO - Loading S-BERT model: sentence-transformers/all-MiniLM-L6-v2
+2025-11-25 22:17:21,798 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-11-25 22:17:29,059 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-11-25 22:17:29,059 - algorithms.deep_learning.sbert_analyzer - INFO - S-BERT model loaded successfully
+2025-11-25 22:17:29,067 - core.algorithm_manager - INFO - Algorithm sbert initialized successfully
+2025-11-25 22:17:29,067 - core.algorithm_manager - INFO - Initializing algorithm: ner
+2025-11-25 22:17:29,072 - algorithms.similarity.ner_analyzer - INFO - Loading spaCy model
+2025-11-25 22:17:35,500 - algorithms.similarity.ner_analyzer - INFO - Loaded spaCy model: en_core_web_sm
+2025-11-25 22:17:35,500 - core.algorithm_manager - INFO - Algorithm ner initialized successfully
+2025-11-25 22:17:35,506 - core.algorithm_manager - INFO - Processing 13 resumes with 4 algorithms
+2025-11-25 22:17:37,810 - algorithms.base_algorithm - INFO - cosine processed 13 resumes in 2.24s
+2025-11-25 22:17:37,833 - core.algorithm_manager - INFO - Completed processing with cosine
+2025-11-25 22:17:54,421 - algorithms.base_algorithm - INFO - ner processed 13 resumes in 18.74s
+2025-11-25 22:17:54,426 - core.algorithm_manager - INFO - Completed processing with ner
+2025-11-25 22:18:42,719 - algorithms.base_algorithm - INFO - sbert processed 13 resumes in 67.11s
+2025-11-25 22:18:42,733 - core.algorithm_manager - INFO - Completed processing with sbert
+2025-11-25 22:19:51,395 - algorithms.base_algorithm - INFO - bert processed 13 resumes in 135.85s
+2025-11-25 22:19:51,400 - core.algorithm_manager - INFO - Completed processing with bert
+2025-11-25 22:19:51,420 - __main__ - INFO - Successfully processed 13 resumes in 170.14s
+2025-11-25 22:19:51,465 - api.middleware - INFO - [req_1764089221_5519] 200 - 170.202s
+2025-11-25 22:19:51,473 - werkzeug - INFO - 127.0.0.1 - - [25/Nov/2025 22:19:51] "POST /api/process-resumes HTTP/1.1" 200 -
