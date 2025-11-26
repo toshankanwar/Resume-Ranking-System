@@ -148,7 +148,7 @@ export default function AboutPage() {
 
   const techStack = [
     { name: 'Frontend', tech: 'Next.js, React, Tailwind CSS', icon: Globe },
-    { name: 'Backend', tech: 'Python, Flask, Node.js', icon: Database },
+    { name: 'Backend', tech: 'Python, Flask, Google Firebase', icon: Database },
     { name: 'AI/ML', tech: 'TensorFlow, scikit-learn, Transformers', icon: Brain },
     { name: 'Processing', tech: 'Multi-threading, Async Processing', icon: Cpu }
   ]
@@ -422,7 +422,7 @@ export default function AboutPage() {
                     <Rocket className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-primary-900 dark:text-primary-100">Academic Project</h3>
-                  <p className="text-primary-700 dark:text-primary-300">Computer Science Minor Project</p>
+                  <p className="text-primary-700 dark:text-primary-300">Data Science Minor Project</p>
                 </div>
                 
                 <div className="space-y-4 text-center">
@@ -437,7 +437,7 @@ export default function AboutPage() {
                       <div className="text-xs text-primary-700 dark:text-primary-300">Open Source</div>
                     </div>
                     <div className="p-3 bg-white/50 dark:bg-gray-800/50 rounded-lg">
-                      <div className="font-bold text-primary-900 dark:text-primary-100">4</div>
+                      <div className="font-bold text-primary-900 dark:text-primary-100">10</div>
                       <div className="text-xs text-primary-700 dark:text-primary-300">AI Methods</div>
                     </div>
                   </div>

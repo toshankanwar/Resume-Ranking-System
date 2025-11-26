@@ -92,13 +92,13 @@ export default function HomePage() {
       avatar: '👩‍💼'
     },
     {
-      name: 'Mike Chen',
+      name: 'Poshan kanwar',
       role: 'Talent Acquisition, StartupXYZ',
       content: 'The BERT semantic analysis is incredible. It understands context better than any human screener I have worked with.',
       avatar: '👨‍💻'
     },
     {
-      name: 'Lisa Park',
+      name: 'Sumit Kanwar',
       role: 'Recruitment Lead, BigTech',
       content: 'Bias-free, accurate, and lightning-fast. This tool has become indispensable for our recruitment team.',
       avatar: '👩‍🔬'

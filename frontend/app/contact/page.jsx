@@ -143,7 +143,7 @@ export default function ContactPage() {
   const stats = [
     { icon: Star, value: '90%', label: 'Accuracy Rate' },
     { icon: Users, value: '10+', label: 'Resumes Processed' },
-    { icon: TrendingUp, value: '5x', label: 'Faster Screening' },
+    { icon: TrendingUp, value: '10x', label: 'Faster Screening' },
     { icon: Award, value: '10+', label: 'AI Algorithms' }
   ]
 
