@@ -206,7 +206,7 @@ export default function AboutPage() {
               Try Demo
             </Link>
             <Link
-              href="https://github.com/toshankanwar"
+              href="https://github.com/toshankanwar/Resume-Ranking-System"
               target="_blank"
               className="inline-flex items-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-2xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300"
             >
