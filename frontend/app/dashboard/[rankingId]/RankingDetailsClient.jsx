@@ -18,6 +18,7 @@ import {
   TrendingUp,
 } from 'lucide-react'
 
+export const runtime = 'edge'
 export default function RankingDetailsClient({ rankingId }) {
   const router = useRouter()
   const [user, setUser] = useState(null)
