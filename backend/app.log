@@ -4324,3 +4324,132 @@ Exception: No algorithms available for processing
 2025-11-27 00:39:10,062 - __main__ - INFO - Successfully processed 4 resumes in 29.91s
 2025-11-27 00:39:10,064 - api.middleware - INFO - [req_1764184120_4703] 200 - 29.915s
 2025-11-27 00:39:10,066 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2025 00:39:10] "POST /api/process-resumes HTTP/1.1" 200 -
+2025-11-27 02:09:50,703 - api.middleware - INFO - [req_1764189590_4703] OPTIONS /api/process-resumes - Start
+2025-11-27 02:09:50,751 - api.middleware - INFO - [req_1764189590_4703] 200 - 0.065s
+2025-11-27 02:09:50,785 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2025 02:09:50] "OPTIONS /api/process-resumes HTTP/1.1" 200 -
+2025-11-27 02:09:51,237 - api.middleware - INFO - [req_1764189591_4703] POST /api/process-resumes - Start
+2025-11-27 02:09:51,376 - __main__ - INFO - Processing request: 2 files, 3 algorithms
+2025-11-27 02:09:51,384 - utils.file_processor - INFO - Processing file 1: resume_ThakurJaideepSingh (3).pdf (pdf)
+2025-11-27 02:09:52,343 - utils.file_processor - INFO - Successfully processed file: resume_ThakurJaideepSingh (3).pdf (3046 chars)
+2025-11-27 02:09:52,347 - utils.file_processor - INFO - Processing file 2: Resume_VanshJangir.pdf (pdf)
+2025-11-27 02:09:52,931 - utils.file_processor - INFO - Successfully processed file: Resume_VanshJangir.pdf (3118 chars)
+2025-11-27 02:09:52,943 - core.algorithm_manager - INFO - Processing 2 resumes with 3 algorithms
+2025-11-27 02:09:53,998 - algorithms.base_algorithm - INFO - cosine processed 2 resumes in 1.00s
+2025-11-27 02:09:54,005 - core.algorithm_manager - INFO - Completed processing with cosine
+2025-11-27 02:09:56,230 - algorithms.base_algorithm - INFO - sbert processed 2 resumes in 3.15s
+2025-11-27 02:09:56,230 - core.algorithm_manager - INFO - Completed processing with sbert
+2025-11-27 02:10:03,062 - algorithms.base_algorithm - INFO - bert processed 2 resumes in 10.09s
+2025-11-27 02:10:03,063 - core.algorithm_manager - INFO - Completed processing with bert
+2025-11-27 02:10:03,074 - __main__ - INFO - Successfully processed 2 resumes in 11.82s
+2025-11-27 02:10:03,080 - api.middleware - INFO - [req_1764189591_4703] 200 - 11.844s
+2025-11-27 02:10:03,082 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2025 02:10:03] "POST /api/process-resumes HTTP/1.1" 200 -
+2025-11-27 02:13:46,163 - api.middleware - INFO - [req_1764189826_4703] OPTIONS /api/process-resumes - Start
+2025-11-27 02:13:46,174 - api.middleware - INFO - [req_1764189826_4703] 200 - 0.013s
+2025-11-27 02:13:46,176 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2025 02:13:46] "OPTIONS /api/process-resumes HTTP/1.1" 200 -
+2025-11-27 02:13:46,383 - api.middleware - INFO - [req_1764189826_4703] POST /api/process-resumes - Start
+2025-11-27 02:13:46,458 - __main__ - INFO - Processing request: 2 files, 3 algorithms
+2025-11-27 02:13:46,458 - utils.file_processor - INFO - Processing file 1: Deepanshu Pratik Resume.pdf (pdf)
+2025-11-27 02:13:48,105 - utils.file_processor - INFO - Successfully processed file: Deepanshu Pratik Resume.pdf (5974 chars)
+2025-11-27 02:13:48,114 - utils.file_processor - INFO - Processing file 2: Gautam_Resume.pdf (pdf)
+2025-11-27 02:13:48,827 - utils.file_processor - INFO - Successfully processed file: Gautam_Resume.pdf (3024 chars)
+2025-11-27 02:13:48,827 - core.algorithm_manager - INFO - Processing 2 resumes with 3 algorithms
+2025-11-27 02:13:49,390 - algorithms.base_algorithm - INFO - cosine processed 2 resumes in 0.50s
+2025-11-27 02:13:49,394 - core.algorithm_manager - INFO - Completed processing with cosine
+2025-11-27 02:13:51,429 - algorithms.base_algorithm - INFO - sbert processed 2 resumes in 2.50s
+2025-11-27 02:13:51,433 - core.algorithm_manager - INFO - Completed processing with sbert
+2025-11-27 02:14:02,013 - algorithms.base_algorithm - INFO - bert processed 2 resumes in 13.17s
+2025-11-27 02:14:02,016 - core.algorithm_manager - INFO - Completed processing with bert
+2025-11-27 02:14:02,024 - __main__ - INFO - Successfully processed 2 resumes in 15.63s
+2025-11-27 02:14:02,030 - api.middleware - INFO - [req_1764189826_4703] 200 - 15.647s
+2025-11-27 02:14:02,042 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2025 02:14:02] "POST /api/process-resumes HTTP/1.1" 200 -
+2025-11-27 02:16:54,763 - api.middleware - INFO - [req_1764190014_4703] OPTIONS /api/process-resumes - Start
+2025-11-27 02:16:54,789 - api.middleware - INFO - [req_1764190014_4703] 200 - 0.036s
+2025-11-27 02:16:54,801 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2025 02:16:54] "OPTIONS /api/process-resumes HTTP/1.1" 200 -
+2025-11-27 02:16:54,865 - api.middleware - INFO - [req_1764190014_4703] POST /api/process-resumes - Start
+2025-11-27 02:16:54,936 - __main__ - INFO - Processing request: 2 files, 3 algorithms
+2025-11-27 02:16:54,940 - utils.file_processor - INFO - Processing file 1: CHIRAG'S_RESUME.pdf (pdf)
+2025-11-27 02:16:55,922 - utils.file_processor - INFO - Successfully processed file: CHIRAG'S_RESUME.pdf (3638 chars)
+2025-11-27 02:16:55,925 - utils.file_processor - INFO - Processing file 2: Deepanshu Pratik Resume.pdf (pdf)
+2025-11-27 02:16:57,241 - utils.file_processor - INFO - Successfully processed file: Deepanshu Pratik Resume.pdf (5974 chars)
+2025-11-27 02:16:57,241 - core.algorithm_manager - INFO - Processing 2 resumes with 3 algorithms
+2025-11-27 02:16:58,084 - algorithms.base_algorithm - INFO - cosine processed 2 resumes in 0.79s
+2025-11-27 02:16:58,103 - core.algorithm_manager - INFO - Completed processing with cosine
+2025-11-27 02:17:00,393 - algorithms.base_algorithm - INFO - sbert processed 2 resumes in 2.98s
+2025-11-27 02:17:00,401 - core.algorithm_manager - INFO - Completed processing with sbert
+2025-11-27 02:17:10,069 - algorithms.base_algorithm - INFO - bert processed 2 resumes in 12.80s
+2025-11-27 02:17:10,074 - core.algorithm_manager - INFO - Completed processing with bert
+2025-11-27 02:17:10,081 - __main__ - INFO - Successfully processed 2 resumes in 15.20s
+2025-11-27 02:17:10,093 - api.middleware - INFO - [req_1764190014_4703] 200 - 15.229s
+2025-11-27 02:17:10,098 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2025 02:17:10] "POST /api/process-resumes HTTP/1.1" 200 -
+2025-11-27 02:18:29,552 - api.middleware - INFO - [req_1764190109_4703] OPTIONS /api/process-resumes - Start
+2025-11-27 02:18:29,562 - api.middleware - INFO - [req_1764190109_4703] 200 - 0.011s
+2025-11-27 02:18:29,562 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2025 02:18:29] "OPTIONS /api/process-resumes HTTP/1.1" 200 -
+2025-11-27 02:18:29,785 - api.middleware - INFO - [req_1764190109_4703] POST /api/process-resumes - Start
+2025-11-27 02:18:29,819 - __main__ - INFO - Processing request: 2 files, 3 algorithms
+2025-11-27 02:18:29,821 - utils.file_processor - INFO - Processing file 1: AJAY_KUMAR_KC_Resume.pdf (pdf)
+2025-11-27 02:18:30,564 - utils.file_processor - INFO - Successfully processed file: AJAY_KUMAR_KC_Resume.pdf (4559 chars)
+2025-11-27 02:18:30,573 - utils.file_processor - INFO - Processing file 2: CHIRAG'S_RESUME.pdf (pdf)
+2025-11-27 02:18:31,405 - utils.file_processor - INFO - Successfully processed file: CHIRAG'S_RESUME.pdf (3638 chars)
+2025-11-27 02:18:31,412 - core.algorithm_manager - INFO - Processing 2 resumes with 3 algorithms
+2025-11-27 02:18:32,626 - algorithms.base_algorithm - INFO - cosine processed 2 resumes in 1.17s
+2025-11-27 02:18:32,631 - core.algorithm_manager - INFO - Completed processing with cosine
+2025-11-27 02:18:35,451 - algorithms.base_algorithm - INFO - ner processed 2 resumes in 3.94s
+2025-11-27 02:18:35,456 - core.algorithm_manager - INFO - Completed processing with ner
+2025-11-27 02:18:43,531 - algorithms.base_algorithm - INFO - bert processed 2 resumes in 12.11s
+2025-11-27 02:18:43,532 - core.algorithm_manager - INFO - Completed processing with bert
+2025-11-27 02:18:43,535 - __main__ - INFO - Successfully processed 2 resumes in 13.75s
+2025-11-27 02:18:43,537 - api.middleware - INFO - [req_1764190109_4703] 200 - 13.751s
+2025-11-27 02:18:43,539 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2025 02:18:43] "POST /api/process-resumes HTTP/1.1" 200 -
+2025-11-27 02:20:26,268 - api.middleware - INFO - [req_1764190226_4703] OPTIONS /api/process-resumes - Start
+2025-11-27 02:20:26,276 - api.middleware - INFO - [req_1764190226_4703] 200 - 0.000s
+2025-11-27 02:20:26,282 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2025 02:20:26] "OPTIONS /api/process-resumes HTTP/1.1" 200 -
+2025-11-27 02:20:26,514 - api.middleware - INFO - [req_1764190226_4703] POST /api/process-resumes - Start
+2025-11-27 02:20:26,535 - __main__ - INFO - Processing request: 2 files, 3 algorithms
+2025-11-27 02:20:26,538 - utils.file_processor - INFO - Processing file 1: CHIRAG'S_RESUME.pdf (pdf)
+2025-11-27 02:20:27,778 - utils.file_processor - INFO - Successfully processed file: CHIRAG'S_RESUME.pdf (3638 chars)
+2025-11-27 02:20:27,782 - utils.file_processor - INFO - Processing file 2: Deepanshu Pratik Resume.pdf (pdf)
+2025-11-27 02:20:29,136 - utils.file_processor - INFO - Successfully processed file: Deepanshu Pratik Resume.pdf (5974 chars)
+2025-11-27 02:20:29,137 - core.algorithm_manager - INFO - Processing 2 resumes with 3 algorithms
+2025-11-27 02:20:29,571 - algorithms.base_algorithm - INFO - cosine processed 2 resumes in 0.40s
+2025-11-27 02:20:29,575 - core.algorithm_manager - INFO - Completed processing with cosine
+2025-11-27 02:20:32,137 - algorithms.base_algorithm - INFO - ner processed 2 resumes in 2.88s
+2025-11-27 02:20:32,141 - core.algorithm_manager - INFO - Completed processing with ner
+2025-11-27 02:20:40,010 - algorithms.base_algorithm - INFO - bert processed 2 resumes in 10.87s
+2025-11-27 02:20:40,015 - core.algorithm_manager - INFO - Completed processing with bert
+2025-11-27 02:20:40,021 - __main__ - INFO - Successfully processed 2 resumes in 13.50s
+2025-11-27 02:20:40,030 - api.middleware - INFO - [req_1764190226_4703] 200 - 13.516s
+2025-11-27 02:20:40,037 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2025 02:20:40] "POST /api/process-resumes HTTP/1.1" 200 -
+2025-11-27 02:22:48,411 - api.middleware - INFO - [req_1764190368_4703] OPTIONS /api/process-resumes - Start
+2025-11-27 02:22:48,429 - api.middleware - INFO - [req_1764190368_4703] 200 - 0.018s
+2025-11-27 02:22:48,437 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2025 02:22:48] "OPTIONS /api/process-resumes HTTP/1.1" 200 -
+2025-11-27 02:22:48,671 - api.middleware - INFO - [req_1764190368_4703] POST /api/process-resumes - Start
+2025-11-27 02:22:48,702 - __main__ - INFO - Processing request: 2 files, 2 algorithms
+2025-11-27 02:22:48,705 - utils.file_processor - INFO - Processing file 1: AJAY_KUMAR_KC_Resume.pdf (pdf)
+2025-11-27 02:22:49,362 - utils.file_processor - INFO - Successfully processed file: AJAY_KUMAR_KC_Resume.pdf (4559 chars)
+2025-11-27 02:22:49,366 - utils.file_processor - INFO - Processing file 2: CHIRAG'S_RESUME.pdf (pdf)
+2025-11-27 02:22:50,025 - utils.file_processor - INFO - Successfully processed file: CHIRAG'S_RESUME.pdf (3638 chars)
+2025-11-27 02:22:50,025 - core.algorithm_manager - INFO - Processing 2 resumes with 2 algorithms
+2025-11-27 02:22:50,163 - algorithms.base_algorithm - INFO - cosine processed 2 resumes in 0.11s
+2025-11-27 02:22:50,164 - core.algorithm_manager - INFO - Completed processing with cosine
+2025-11-27 02:22:56,715 - algorithms.base_algorithm - INFO - bert processed 2 resumes in 6.69s
+2025-11-27 02:22:56,716 - core.algorithm_manager - INFO - Completed processing with bert
+2025-11-27 02:22:56,717 - __main__ - INFO - Successfully processed 2 resumes in 8.04s
+2025-11-27 02:22:56,718 - api.middleware - INFO - [req_1764190368_4703] 200 - 8.047s
+2025-11-27 02:22:56,718 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2025 02:22:56] "POST /api/process-resumes HTTP/1.1" 200 -
+2025-11-27 02:24:31,375 - api.middleware - INFO - [req_1764190471_4703] OPTIONS /api/process-resumes - Start
+2025-11-27 02:24:31,375 - api.middleware - INFO - [req_1764190471_4703] 200 - 0.000s
+2025-11-27 02:24:31,375 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2025 02:24:31] "OPTIONS /api/process-resumes HTTP/1.1" 200 -
+2025-11-27 02:24:31,625 - api.middleware - INFO - [req_1764190471_4703] POST /api/process-resumes - Start
+2025-11-27 02:24:31,658 - __main__ - INFO - Processing request: 2 files, 2 algorithms
+2025-11-27 02:24:31,658 - utils.file_processor - INFO - Processing file 1: resume_ThakurJaideepSingh (3).pdf (pdf)
+2025-11-27 02:24:32,428 - utils.file_processor - INFO - Successfully processed file: resume_ThakurJaideepSingh (3).pdf (3046 chars)
+2025-11-27 02:24:32,430 - utils.file_processor - INFO - Processing file 2: Resume_VanshJangir.pdf (pdf)
+2025-11-27 02:24:36,841 - utils.file_processor - INFO - Successfully processed file: Resume_VanshJangir.pdf (3118 chars)
+2025-11-27 02:24:36,843 - core.algorithm_manager - INFO - Processing 2 resumes with 2 algorithms
+2025-11-27 02:24:37,040 - algorithms.base_algorithm - INFO - cosine processed 2 resumes in 0.15s
+2025-11-27 02:24:37,043 - core.algorithm_manager - INFO - Completed processing with cosine
+2025-11-27 02:24:47,345 - algorithms.base_algorithm - INFO - bert processed 2 resumes in 10.50s
+2025-11-27 02:24:47,345 - core.algorithm_manager - INFO - Completed processing with bert
+2025-11-27 02:24:47,353 - __main__ - INFO - Successfully processed 2 resumes in 15.72s
+2025-11-27 02:24:47,357 - api.middleware - INFO - [req_1764190471_4703] 200 - 15.733s
+2025-11-27 02:24:47,363 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2025 02:24:47] "POST /api/process-resumes HTTP/1.1" 200 -
