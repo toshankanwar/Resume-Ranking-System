@@ -40,7 +40,7 @@ async function getRankingDetails(rankingId, userId) {
     return null
   }
 }
-
+export const runtime = 'edge'
 export default async function RankingDetailsPage({ params }) {
   const { rankingId } = await params
 
