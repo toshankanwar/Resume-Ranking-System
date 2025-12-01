@@ -2,8 +2,9 @@
 
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { Brain, User as UserIcon, LogOut, Menu, X, Home, Info, Zap, Mail, LayoutDashboard, UserCircle, KeyRound } from 'lucide-react';
+import { Brain, User as UserIcon, LogOut, Menu, X, Home, Info, Zap, Mail, LayoutDashboard, UserCircle, KeyRound, Share2 } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
+import ShareButton from './ShareButton';
 import { useAuth } from '@/hooks/useAuth';
 import { auth } from '@/lib/firebase';
 import { signOut } from 'firebase/auth';
@@ -79,7 +80,7 @@ export default function Header() {
               ))}
             </nav>
 
-            {/* Right side: auth + theme + mobile menu */}
+            {/* Right side: auth + share + theme + mobile menu */}
             <div className="flex items-center gap-3">
               {/* Desktop Auth Buttons */}
               {!loading && !user && (
@@ -168,6 +169,15 @@ export default function Header() {
                   )}
                 </div>
               )}
+
+              {/* Share Button - Desktop */}
+              <div className="hidden md:block">
+                <ShareButton 
+                  title="ResumeRank - AI Resume Ranking"
+                  text="Check out this AI-powered resume ranking system! 🚀"
+                  className="px-3 py-2 text-sm"
+                />
+              </div>
 
               {/* Theme Toggle */}
               <ThemeToggle />
@@ -302,6 +312,17 @@ export default function Header() {
                   </Link>
                 </>
               )}
+
+              {/* Share Button - Mobile */}
+              <div className="my-4 border-t border-gray-200 dark:border-gray-700 pt-4">
+                <div className="px-4">
+                  <ShareButton 
+                    title="ResumeRank - AI Resume Ranking"
+                    text="Check out this AI-powered resume ranking system! 🚀"
+                    className="w-full justify-center"
+                  />
+                </div>
+              </div>
             </nav>
           </div>
 

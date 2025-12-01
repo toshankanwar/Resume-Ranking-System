@@ -53,7 +53,7 @@ def create_app(config_name='default'):
     app.config.from_object(config)
     
     # Enable CORS
-    CORS(app, origins=['http://localhost:3000', 'http://localhost:3001'])
+    CORS(app, origins=['https://resume.createfast.tech', 'http://localhost:3001'])
     
     # Setup middleware
     setup_middleware(app)

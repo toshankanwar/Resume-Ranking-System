@@ -1,4 +1,3 @@
-'use client'
 
 import { notFound } from 'next/navigation'
 import { collection, doc, getDoc, getDocs } from 'firebase/firestore'

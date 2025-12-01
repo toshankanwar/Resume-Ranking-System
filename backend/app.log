@@ -4453,3 +4453,24 @@ Exception: No algorithms available for processing
 2025-11-27 02:24:47,353 - __main__ - INFO - Successfully processed 2 resumes in 15.72s
 2025-11-27 02:24:47,357 - api.middleware - INFO - [req_1764190471_4703] 200 - 15.733s
 2025-11-27 02:24:47,363 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2025 02:24:47] "POST /api/process-resumes HTTP/1.1" 200 -
+2025-11-27 10:18:25,892 - api.error_handlers - INFO - Error handlers registered successfully
+2025-11-27 10:18:25,919 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.105:5000
+2025-11-27 10:18:25,920 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-11-27 10:18:25,923 - werkzeug - INFO -  * Restarting with stat
+2025-11-27 10:18:30,063 - api.error_handlers - INFO - Error handlers registered successfully
+2025-11-27 10:18:30,075 - werkzeug - WARNING -  * Debugger is active!
+2025-11-27 10:18:30,090 - werkzeug - INFO -  * Debugger PIN: 133-665-231
+2025-11-27 10:20:43,435 - api.middleware - INFO - [req_1764219043_2245] GET /api/health - Start
+2025-11-27 10:20:43,438 - api.middleware - INFO - [req_1764219043_2245] 200 - 0.003s
+2025-11-27 10:20:43,441 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2025 10:20:43] "GET /api/health HTTP/1.1" 200 -
+2025-11-27 10:20:43,670 - api.middleware - INFO - [req_1764219043_1137] GET /favicon.ico - Start
+2025-11-27 10:20:43,672 - api.error_handlers - INFO - 404 Not Found: http://localhost:5000/favicon.ico
+2025-11-27 10:20:43,675 - api.middleware - INFO - [req_1764219043_1137] 404 - 0.005s
+2025-11-27 10:20:43,677 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2025 10:20:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-27 10:28:19,208 - api.middleware - INFO - [req_1764219499_3767] GET /api/process-resumes - Start
+2025-11-27 10:28:19,210 - api.error_handlers - WARNING - Method not allowed: GET http://localhost:5000/api/process-resumes
+2025-11-27 10:28:19,211 - api.middleware - INFO - [req_1764219499_3767] 405 - 0.003s
+2025-11-27 10:28:19,212 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2025 10:28:19] "[31m[1mGET /api/process-resumes HTTP/1.1[0m" 405 -
