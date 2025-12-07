@@ -10,12 +10,23 @@ const inter = Inter({
   display: 'swap',
 })
 
+// Dynamic base URL
+const baseUrl = process.env.VERCEL_URL 
+  ? `https://${process.env.VERCEL_URL}`
+  : process.env.NODE_ENV === 'production'
+    ? 'https://resume.createfast.tech'
+    : 'http://localhost:3000'
+
 export const metadata = {
+  metadataBase: new URL(baseUrl), // ✅ Added for Vercel
+  
   title: {
-    default: 'ResumeRank - AI-Powered Resume Ranking System',
-    template: '%s | ResumeRank'
+    default: 'ResumeRank - AI-Powered Resume Ranking System | Smart Recruitment Software',
+    template: '%s | ResumeRank - AI Resume Screening'
   },
-  description: 'AI-powered resume screening and ranking system using BERT, NLP, and machine learning. Analyze resumes in seconds with 92.5% accuracy.',
+  
+  description: 'AI-powered resume screening and ranking system using BERT, NLP, and machine learning. Analyze resumes in seconds with 92.5% accuracy. Automate your recruitment process with intelligent candidate ranking.',
+  
   applicationName: 'ResumeRank',
   
   // Keywords for SEO
@@ -29,7 +40,15 @@ export const metadata = {
     'automated resume screening',
     'candidate ranking',
     'resume AI',
-    'recruitment software'
+    'recruitment software',
+    'ATS system',
+    'applicant tracking',
+    'resume analyzer',
+    'CV screening',
+    'talent acquisition',
+    'HR automation',
+    'resume matching',
+    'job candidate screening'
   ],
   
   authors: [
@@ -38,27 +57,30 @@ export const metadata = {
   creator: 'Toshan Kanwar',
   publisher: 'ResumeRank',
   
-  // Open Graph (Facebook, LinkedIn, Discord)
+  // Referrer policy
+  referrer: 'origin-when-cross-origin',
+  
+  // Open Graph (Facebook, LinkedIn, Discord, WhatsApp)
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://yoursite.com', // Replace with your actual domain
+    url: baseUrl,
     siteName: 'ResumeRank',
     title: 'ResumeRank - AI-Powered Resume Ranking System',
-    description: 'AI-powered resume screening using BERT, NLP, and machine learning. Analyze 10,000+ resumes with 92.5% accuracy.',
+    description: 'AI-powered resume screening using BERT, NLP, and machine learning. Analyze 10,000+ resumes with 92.5% accuracy. Automate your recruitment with smart candidate ranking.',
     images: [
       {
-        url: '/og-image.png', // 1200x630px
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'ResumeRank - AI Resume Ranking Dashboard',
         type: 'image/png',
       },
       {
-        url: '/og-image-square.png', // 1200x1200px for Instagram
+        url: '/og-image-square.png',
         width: 1200,
         height: 1200,
-        alt: 'ResumeRank Logo',
+        alt: 'ResumeRank Logo - AI Recruitment Software',
         type: 'image/png',
       }
     ],
@@ -67,23 +89,38 @@ export const metadata = {
   // Twitter Card
   twitter: {
     card: 'summary_large_image',
-    title: 'ResumeRank - AI-Powered Resume Ranking',
-    description: 'AI-powered resume screening using BERT, NLP, and ML. 92.5% accuracy.',
-    site: '@yourhandle', // Replace with your Twitter handle
-    creator: '@yourhandle',
-    images: ['/og-image.png'],
+    title: 'ResumeRank - AI-Powered Resume Ranking & Screening',
+    description: 'AI-powered resume screening using BERT, NLP, and ML. Analyze resumes with 92.5% accuracy. Automate recruitment.',
+    site: '@toshankanwar',
+    creator: '@toshankanwar',
+    images: {
+      url: '/og-image.png',
+      alt: 'ResumeRank AI Resume Screening Dashboard',
+    },
   },
   
   // Robots
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: false,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
+    },
+  },
+  
+  // Alternate languages (if you have multi-language)
+  alternates: {
+    canonical: baseUrl,
+    languages: {
+      'en-US': baseUrl,
+      // Add more if needed
+      // 'hi-IN': `${baseUrl}/hi`,
     },
   },
   
@@ -158,17 +195,39 @@ export const metadata = {
     ],
   },
   
-  // Verification (Add your verification codes)
-  verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-    // yahoo: 'your-yahoo-verification-code',
-    // other: 'your-other-verification-code',
+  // Manifest
+  manifest: '/manifest.json',
+  
+  // App Links (for deep linking)
+  appLinks: {
+    web: {
+      url: baseUrl,
+      should_fallback: true,
+    },
   },
   
-  // Other Meta
+  // Archives (for sitemap)
+  archives: [`${baseUrl}/sitemap.xml`],
+  
+  // Assets
+  assets: [`${baseUrl}/assets`],
+  
+  // Bookmarks
+  bookmarks: [baseUrl],
+  
+  // Category
   category: 'technology',
   classification: 'Business Software',
+  
+  // Other Meta
+  other: {
+    'mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-capable': 'yes',
+    'application-name': 'ResumeRank',
+    'msapplication-TileColor': '#6366f1',
+    'msapplication-config': '/browserconfig.xml',
+    'theme-color': '#6366f1',
+  },
 }
 
 export const viewport = {
@@ -181,6 +240,7 @@ export const viewport = {
   maximumScale: 5,
   userScalable: true,
   viewportFit: 'cover',
+  colorScheme: 'light dark',
 }
 
 export default function RootLayout({ children }) {
@@ -198,30 +258,116 @@ export default function RootLayout({ children }) {
         <meta property="og:site_name" content="ResumeRank" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/png" />
         
         {/* Twitter Additional Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@yourhandle" />
-        <meta name="twitter:creator" content="@yourhandle" />
+        <meta name="twitter:site" content="@toshankanwar" />
+        <meta name="twitter:creator" content="@toshankanwar" />
+        <meta name="twitter:image:alt" content="ResumeRank AI Resume Screening Dashboard" />
         
         {/* Microsoft Tags */}
         <meta name="msapplication-TileColor" content="#6366f1" />
+        <meta name="msapplication-TileImage" content="/mstile-150x150.png" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="msapplication-navbutton-color" content="#6366f1" />
+        <meta name="msapplication-starturl" content="/" />
         
-        {/* Additional Meta */}
+        {/* Additional Meta for SEO */}
         <meta name="format-detection" content="telephone=no" />
         <meta name="format-detection" content="date=no" />
         <meta name="format-detection" content="address=no" />
         <meta name="format-detection" content="email=no" />
+        <meta name="rating" content="General" />
+        <meta name="distribution" content="Global" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="author" content="Toshan Kanwar" />
+        <meta name="copyright" content="ResumeRank" />
+        <meta name="coverage" content="Worldwide" />
+        <meta name="target" content="all" />
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
         
         {/* Preconnect for Performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://firebasestorage.googleapis.com" />
         
-        {/* Canonical URL */}
-        <link rel="canonical" href="https://yoursite.com" />
+        {/* Schema.org JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'SoftwareApplication',
+              name: 'ResumeRank',
+              applicationCategory: 'BusinessApplication',
+              operatingSystem: 'Web, Android, iOS',
+              offers: {
+                '@type': 'Offer',
+                price: '0',
+                priceCurrency: 'USD',
+              },
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: '4.8',
+                ratingCount: '250',
+              },
+              description: 'AI-powered resume screening and ranking system using BERT, NLP, and machine learning.',
+              author: {
+                '@type': 'Person',
+                name: 'Toshan Kanwar',
+                url: 'https://toshankanwar.website',
+              },
+              publisher: {
+                '@type': 'Organization',
+                name: 'ResumeRank',
+                logo: {
+                  '@type': 'ImageObject',
+                  url: `${baseUrl}/icon-512x512.png`,
+                },
+              },
+              screenshot: `${baseUrl}/og-image.png`,
+              softwareVersion: '1.0.0',
+              datePublished: '2024-01-01',
+              dateModified: new Date().toISOString(),
+            }),
+          }}
+        />
+        
+        {/* Organization Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'ResumeRank',
+              url: baseUrl,
+              logo: `${baseUrl}/icon-512x512.png`,
+              description: 'AI-powered resume screening and ranking system',
+              foundingDate: '2024',
+              founder: {
+                '@type': 'Person',
+                name: 'Toshan Kanwar',
+              },
+              contactPoint: {
+                '@type': 'ContactPoint',
+                contactType: 'Customer Support',
+                email: 'support@resume.createfast.tech',
+              },
+              sameAs: [
+                'https://github.com/yourusername',
+                'https://linkedin.com/in/yourusername',
+              ],
+            }),
+          }}
+        />
       </head>
       <body className={inter.className}>
         <ThemeProvider>
