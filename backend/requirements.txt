@@ -1,35 +1,48 @@
+# System build tools (install first)
+setuptools>=65.0.0
+wheel>=0.38.0
+Cython>=0.29.0
+
 # Flask Framework
-Flask==3.1.0
-Flask-CORS==5.0.0
-Flask-Caching==2.3.0
-python-multipart==0.0.20
-Werkzeug==3.1.3
+Flask==3.0.3
+Flask-CORS==4.0.1
+Flask-Caching==2.1.0
+python-multipart==0.0.9
+Werkzeug==3.0.3
+
+# Pre-built wheels for blis and other Cython packages
+--find-links https://github.com/explosion/spacy-models/releases/download
+blis>=0.7.11,<0.8.0
+cymem>=2.0.2,<2.1.0
+murmurhash>=1.0.0,<1.1.0
+preshed>=3.0.2,<3.1.0
+thinc>=8.2.0,<8.3.0
+
+# Spacy - Use older stable version
+spacy==3.7.2
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
 
 # Deep Learning & NLP
 --extra-index-url https://download.pytorch.org/whl/cpu
-torch==2.5.1+cpu
-transformers==4.47.1
-sentence-transformers==3.3.1
+torch==2.3.1+cpu
+torchaudio==2.3.1+cpu
+torchvision==0.18.1+cpu
+transformers==4.40.2
+sentence-transformers==2.7.0
 
-# Spacy - Compatible with Python 3.11
-spacy==3.7.6
-en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
-
-nltk==3.9.1
+nltk==3.8.1
 
 # Traditional ML
-scikit-learn==1.6.0
-xgboost==2.1.3
-pandas==2.2.3
-numpy==2.1.3
+scikit-learn==1.4.2
+xgboost==2.0.3
+pandas==2.2.2
+numpy==1.26.4
 
 # Text Processing
 PyPDF2==3.0.1
-python-docx==1.1.2
+python-docx==1.1.0
 
 # Utilities
-redis==5.2.1
-celery==5.4.0
-gunicorn==23.0.0
+gunicorn==22.0.0
 python-dotenv==1.0.1
 joblib==1.4.2
