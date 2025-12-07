@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: resume-ranker-backend
+    env: python
+    runtime: python-3.11.0
+    region: singapore  # or oregon, frankfurt
+    plan: free  # or starter
+    buildCommand: |
+      pip install --upgrade pip setuptools wheel
+      pip install --no-cache-dir -r requirements.txt
+      python -m spacy download en_core_web_sm
+      python -m nltk.downloader punkt stopwords wordnet
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 2 --timeout 120 --log-level info
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: FLASK_ENV
+        value: production
+      - key: FLASK_DEBUG
+        value: 0
+      - key: MAX_CONTENT_LENGTH
+        value: 16777216  # 16MB
