@@ -170,7 +170,7 @@ export default function Footer() {
               <Heart className="w-4 h-4 text-red-500 fill-current animate-pulse" />
               <span>by</span>
               <Link 
-                href="https://toshankanwar.website/" 
+                href="https://toshankanwar.in/" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-semibold transition-colors inline-flex items-center group"

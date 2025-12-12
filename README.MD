@@ -125,7 +125,7 @@ All data anonymized (PII removed, locations generalized, consent obtained).
 ## 📧 Contact
 
 Name: Toshan Kanwar 
-Email: contact@toshankanwar.website  
+Email: contact@toshankanwar.in 
 GitHub: [@toshankanwar](https://github.com/toshankanwar)
 
 ## 🙏 Acknowledgments

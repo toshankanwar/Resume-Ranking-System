@@ -46,7 +46,7 @@ export default function ContactPage() {
       const formData = new FormData()
       
       // Web3Forms configuration
-      formData.append('access_key', process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || 'b8a13edd-5d10-492a-992f-40dc5acd7849')
+      formData.append('access_key', process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '08ac4226-79c3-4554-8c7b-8397c9e00bca')
       formData.append('name', data.name)
       formData.append('email', data.email)
       formData.append('subject', data.subject || 'Contact from ResumeRank AI')
@@ -86,8 +86,8 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: 'Email',
-      content: 'contact@toshankanwar.website',
-      link: 'mailto:contact@toshankanwar.website',
+      content: 'contact@toshankanwar.in',
+      link: 'mailto:contact@toshankanwar.in',
       color: 'text-blue-600 dark:text-blue-400',
       bg: 'bg-blue-100 dark:bg-blue-900/30'
     },
@@ -102,8 +102,8 @@ export default function ContactPage() {
     {
       icon: Globe,
       title: 'Website',
-      content: 'toshankanwar.website',
-      link: 'https://toshankanwar.website',
+      content: 'toshankanwar.in',
+      link: 'https://toshankanwar.in',
       color: 'text-green-600 dark:text-green-400',
       bg: 'bg-green-100 dark:bg-green-900/30'
     },
@@ -379,7 +379,7 @@ export default function ContactPage() {
                   Computer Science student passionate about AI, machine learning, and making hiring processes more efficient.
                 </p>
                 <Link
-                  href="https://toshankanwar.website"
+                  href="https://toshankanwar.in"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-primary-700 dark:text-primary-300 hover:text-primary-600 dark:hover:text-primary-200 font-medium text-sm group"
